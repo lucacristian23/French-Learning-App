@@ -1,0 +1,53 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #0dcfe9 0%, #1098f3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  background-image: linear-gradient(to top left, #91c5cc 0%, #126297 100%);
+  color: white;
+  padding: 20px 40px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 4em; /* 4 times the default size */
+  cursor: pointer;
+  color: black; /* Text color inside the button */
+  padding: 20px 120px;
+}
+
+.image-above {
+  display: block; /* Face imaginea un element bloc */
+  margin: 30px auto; /* Ajustează marginile pentru a centra imaginea */
+}
+
+.container {
+  text-align: center; /* Aliniaza continutul pe centru */
+  position: relative; /* Face containerul un element de referință pentru poziționarea absolută */
+}
+.image-above {
+  display: block;
+  position: absolute; /* Poziționează imaginea absolut în interiorul containerului */
+  top: -300; /* Plasează imaginea la partea de sus a containerului */
+  left: 50%; /* Mută imaginea pe orizontală la jumătatea containerului */
+  transform: translateX(-50%); /* Centrează imaginea pe orizontală */
+}
+.dice-button {
+  background-image: linear-gradient(to top left, #91c5cc 0%, #126297 100%);
+  color: white;
+  padding: 20px 40px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 4em; /* 4 times the default size */
+  cursor: pointer;
+  color: black; /* Text color inside the button */
+  padding: 20px 120px;
+  
+}
+.display{
+  display: none;
+}
