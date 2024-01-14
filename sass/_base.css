@@ -71,6 +71,26 @@ button {
   position: absolute
  
 }
+.masculine-button {
+  position:absolute;
+  bottom: 250px;
+  left: 300px;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  padding-top: 12px;
+  background-image: linear-gradient(to top left, #1fa758 0%, #26e70c 100%);
+}
+.feminine-button {
+  position:absolute;
+  bottom: 250px;
+  right: 300px;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  padding-top: 12px;
+  background-image: linear-gradient(to top left, #7c2170 0%, #a826f3 100%);
+}
 .display{
   visibility: hidden
 }
@@ -86,4 +106,103 @@ button {
   color: rgb(48, 10, 10);
   font-size: 42px;
   font-family: 'Didot', serif;
+}
+.displaySubstantive{
+  width: 450px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  position: absolute;
+  pointer-events: none;
+  color: rgb(48, 10, 10);
+  font-size: 42px;
+  font-family: 'Didot', serif;
+  top: 30px;
+  font-size: 90px;
+  font-family: 'Didot', serif;
+  text-align: center;
+}
+.displayScore1{
+  position: absolute;
+  width: 300px; /* Adjust width as needed */
+  height: 75px; /* Adjust height as needed */
+  pointer-events: none;
+  bottom: 100px;
+  right: 30px;
+  color: rgb(48, 10, 10);
+  font-size: 45px;
+
+}
+
+.labelPlayer{
+  font-size: 45px;
+}
+
+.leaderboardTitle{
+  position: absolute;
+  font-size: 70px;
+  top: 15px;
+  left:350px;
+}
+.playerName{
+  height: 45px; 
+  font-size: 30px;
+}
+.buttonSubmit{
+  position: absolute;
+  bottom: 270px;
+  left: 720px;
+}
+.skipButton{
+  position: absolute;
+  bottom:100px;
+  left:100px;
+  height:100px;
+  font-size:40px;
+  text-align: center;
+}
+.scoreTitle{
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  font-size: 150px;
+  transform: translateX(-50%);
+}
+
+.checkBoxes{
+  transform: scale(1.5)
+}
+
+.selectTensesTitle{
+  position: absolute;
+  top: -250px;
+  left: 130px;
+  font-weight: bold;
+  font-size:50px;
+ 
+
+}
+.selectTensesDescription{
+  position: absolute;
+  font-size:30px;
+  top: -130px;
+  left: 220px;
+}
+.startGame2Button{
+  position: absolute;
+  transform: scale(0.5);
+  left:240px;
+  top:60px;
+}
+.displayVerb{
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  transform: translate(-50%, -50%);
+  font-size:200px;
+}
+.displayTense{
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translate(-50%, -50%);
+  font-size:150px;
 }
