@@ -19,6 +19,8 @@ const init = function(){
     substantiveView.skipButton(model.procesateSkipButton)
     verbView.displayGameButtons(model.displayCheckBoxesGame2)
     verbView.startGame2(model.startAndProcesateGame2)
+    verbView.handleAnswer(model.procesateAnswer)
+    verbView.introduceSpecialLetter(model.specialButtonsProcesate)
 }
 init();
 
@@ -32,3 +34,13 @@ function startGame() {
     console.log("Selected Tenses:", selectedTenses);
     // Add your game logic here
 }
+
+function insertLetter(letter) {
+    const inputField = document.getElementById('userAnswer');
+    const cursorPos = inputField.selectionStart;
+    const textBefore = inputField.value.substring(0, cursorPos);
+    const textAfter = inputField.value.substring(cursorPos);
+    inputField.value = textBefore + letter + textAfter;
+    inputField.focus();
+    inputField.setSelectionRange(cursorPos + 1, cursorPos + 1);
+  }

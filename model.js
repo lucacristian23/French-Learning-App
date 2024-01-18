@@ -18,8 +18,9 @@ const verbView = document.querySelector(`.verbsView`);
 const displayVerb = document.querySelector(`.displayVerb`)
 const displayTense = document.querySelector(`.displayTense`)
 const displayPerson = document.querySelector(`.displayPerson`)
-
-
+const userAnswerLabel = document.querySelector(".inputPerson");
+const verbForm = document.querySelector(".inputVerbForm");
+let verbConjugationOutsideScope 
 
 export const generateGameModes = function(){
    
@@ -144,7 +145,7 @@ const displayLeaderboardForm = function() {
 }
 export const procesateLeaderBoard1 = function(){
 
-   let playerName = document.getElementById('playerName').value;
+   let playerName = document.querySelector('.playerName').value
  
    let playerData = {
       playerName: playerName,
@@ -159,9 +160,7 @@ console.log(leaderboard1);
   
    document.getElementById('leaderboardForm').reset();
 
-score = 0;
-scoreContainer.innerHTML = ``
-      scoreContainer.innerHTML = `SCORE:${score}`
+
 
    button1.classList.toggle('display');
    button2.classList.toggle('display');
@@ -227,28 +226,90 @@ export const displayCheckBoxesGame2 = function(){
 
 }
 let selectedTenses;
+let randomVerb;
+let randomTense;
+let randomPerson;
 export const startAndProcesateGame2 = function(){
    const form = document.getElementById("tenseSelectionForm");
     selectedTenses = Array.from(form.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.name);
    console.log("Selected Tenses:", selectedTenses);
-
-
-
-
-   const randomVerb = getRandomVerb();
- const randomTense = getRandomTense(randomVerb);
- const randomPerson = getRandomPerson(randomVerb[randomTense]);
+   
+   scoreContainer.classList.toggle('display');
+  
+   scoreContainer.innerHTML = `SCORE:${score}`
+  
+  
+ randomVerb = getRandomVerb();
+ randomTense = getRandomTense(randomVerb);
+  randomPerson = getRandomPerson(randomVerb[randomTense]);
  checkBoxes.classList.toggle('display1');
  //console.log(`Infinitive: ${randomVerb.infinitive}`);
 //console.log(`Tense: ${randomTense}`);
 //console.log(`Person: ${randomPerson}`);
-//console.log(`Conjugation: ${randomVerb[randomTense][randomPerson]}`);
+// console.log(`${randomVerb[randomTense][randomPerson]}`);
+verbConjugationOutsideScope  = `${randomVerb[randomTense][randomPerson]}`
 verbView.classList.toggle('display1');
 displayTense.innerHTML =randomTense ;
-displayPerson.innerHTML = randomPerson;
-
+// displayPerson.innerHTML = randomPerson;
 displayVerb.innerHTML = randomVerb.infinitive;
+
+ // Corrected selector
+userAnswerLabel.innerText =  `${randomPerson}`;
+
+ 
+}
+const previousAnswer = document.querySelector('.displayPreviousAnswer')
+const previousCorrectAnswer = document.querySelector('.displayPreviousCorrectAnswer')
+export const procesateAnswer = function(answer){
+   let verbConjugation
+   
+   verbConjugation = verbConjugationOutsideScope 
+   verbForm.reset();
+   if(answer === verbConjugation )
+score = score + 100;
+else
+score = score - 100;
+console.log(answer);
+console.log(verbConjugationOutsideScope);
+
+
+previousAnswer.innerHTML = `${answer}` 
+previousCorrectAnswer.innerHTML = `${verbConjugation}` 
+      scoreContainer.innerHTML = `SCORE:${score}`
+
+   randomVerb = getRandomVerb();
+ randomTense = getRandomTense(randomVerb);
+  randomPerson = getRandomPerson(randomVerb[randomTense]);
+  verbConjugationOutsideScope  = `${randomVerb[randomTense][randomPerson]}`
+displayTense.innerHTML =randomTense ;
+displayVerb.innerHTML = randomVerb.infinitive;
+userAnswerLabel.innerText =  `${randomPerson}`;
+
 }
 //const displayVerb = document.querySelector(`.displayVerb`) 
 //const displayTense = document.querySelector(`.displayTense`)
 //const displayPerson = document.querySelector(`.displayPerson`)
+// export const insertLetter=function(letter) {
+ //  const inputField = document.getElementById('userAnswer');
+  // const cursorPos = inputField.selectionStart;
+  // const textBefore = inputField.value.substring(0, cursorPos);
+  // const textAfter = inputField.value.substring(cursorPos);
+ //  inputField.value = textBefore + letter + textAfter;
+ //  inputField.focus();
+  // inputField.setSelectionRange(cursorPos + 1, cursorPos + 1);
+// }
+
+
+ export const specialButtonsProcesate = function(letter) {
+   console.log(`Clicked special button with letter: ${letter}`);
+  
+
+
+   const inputField = document.getElementById('userAnswer');
+   const cursorPos = inputField.selectionStart;
+   const textBefore = inputField.value.substring(0, cursorPos);
+   const textAfter = inputField.value.substring(cursorPos);
+   inputField.value = textBefore + letter + textAfter;
+   inputField.focus();
+   inputField.setSelectionRange(cursorPos + 1, cursorPos + 1);
+ }

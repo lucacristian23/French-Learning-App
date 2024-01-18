@@ -206,3 +206,203 @@ button {
   transform: translate(-50%, -50%);
   font-size:150px;
 }
+.inputVerbForm{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom:200px;
+}
+
+.inputPerson{
+  position: fixed; /* Change to fixed position */
+  left: -10%; /* Adjust the left position as needed */
+  font-size:30px;
+    width: 300px; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    bottom:-435px;
+    
+}
+.verbButton{
+  transform: scale(0.9);
+ top:45px;
+}
+#userAnswer {
+  font-size: 30px; /* Adjust the font size as needed */
+  width: 250px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+}
+.buttonÀ{
+  transform: scale(0.3);
+ bottom:-140px;
+ position: fixed;
+ right:1225px;
+ width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÀ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:1100px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.buttonÂ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:975px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÄ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:850px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÉ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:725px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÈ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:600px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÊ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:475px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonË{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:350px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÎ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:225px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÏ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:100px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÔ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:-25px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonŒ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:-150px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÙ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:-275px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÛ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:-400px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÜ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:-525px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonÇ{
+  transform: scale(0.3);
+  bottom:-140px;
+  position: fixed;
+  right:-650px;
+  width: 40px;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.displayPreviousAnswer{
+  position: absolute;
+  left: 13%;
+  top: 100px;
+  transform: translate(-50%, -50%);
+  font-size:60px;
+}
+.displayPreviousCorrectAnswer{
+  position: absolute;
+  left: 87%;
+  top: 100px;
+  transform: translate(-50%, -50%);
+  font-size:60px;
+}
