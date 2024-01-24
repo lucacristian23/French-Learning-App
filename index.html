@@ -1,125 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       
-        <script  type="module" defer src="controller.js">  </script>
-        <link rel="stylesheet" href="sass/_base.css" />
-        <link rel="shortcut icon" href="download (15).png" type="image/x-icon" />
-        <title>French Learning Game</title>
-    </head>
+  <head>
+    <script type="module" defer src="controller.js"></script>
+    <link rel="stylesheet" href="sass/_base.css" />
+    <link rel="shortcut icon" href="download (15).png" type="image/x-icon" />
+    <title>French Learning Game</title>
+  </head>
 
-
-<body>
-   
-    <img class="image-above" src="download (15).png" alt="Descrierea imaginii">
+  <body>
+    <img
+      class="image-above"
+      src="download (15).png"
+      alt="Descrierea imaginii"
+    />
     <button class="button">Game Modes</button>
-    <button  class="dice-button dice-button1 display">Substantive Gender Sprint</button>
-    <button class="dice-button dice-button2 display">Type in the correct form of the verb</button>
-    <button class="dice-button dice-button3 display">Name what is in the image</button>
-    <button class="dice-button dice-button4 display">Select the correct missing word</button>
-    <div class="displayGameInfo">
-      </div>
-      <button class="masculine-button display ">Masculine</button>
-      <button class="feminine-button display ">Feminine</button>
-      <div class="displaySubstantive">
-    </div>
-    <div class="displayScore1 display">SCORE:0
-    </div>
+    <button class="dice-button dice-button1 display">
+      Substantive Gender Sprint
+    </button>
+    <button class="dice-button dice-button2 display">
+      Type in the correct form of the verb
+    </button>
+    <button class="dice-button dice-button3 display">
+      Super World Translation Guesser
+    </button>
+    <button class="dice-button dice-button4 display">
+      Select the correct missing word
+    </button>
+    <div class="displayGameInfo"></div>
+    <button class="masculine-button display">Masculine</button>
+    <button class="feminine-button display">Feminine</button>
+    <div class="displaySubstantive"></div>
+    <div class="displayScore1 display">SCORE:0</div>
     <form class="display1" id="leaderboardForm">
-        <p class="leaderboardTitle">Submit your score to the leaderboard!</p>
-        <label class="labelPlayer" for="playerName">Enter your name:</label>
-        <input type="text" class="playerName" name="playerName" required>
-        <!-- You might also have an input for the score -->
-        <!-- Replace "score" with whatever variable holds the player's score -->
-       
-        <button class="buttonSubmit" type="submit">Submit</button>
-        <button class="skipButton">Skip</button>
-        <p class="scoreTitle"></p>
+      <p class="leaderboardTitle">Submit your score to the leaderboard!</p>
+      <label class="labelPlayer" for="playerName">Enter your name:</label>
+      <input type="text" class="playerName" name="playerName" required />
+      <!-- You might also have an input for the score -->
+      <!-- Replace "score" with whatever variable holds the player's score -->
+
+      <button class="buttonSubmit" type="submit">Submit</button>
+      <button class="skipButton">Skip</button>
+      <p class="scoreTitle"></p>
     </form>
 
-    
-    
-
-    
     <form id="tenseSelectionForm" class="checkBoxes display1">
       <label>
-          <input type="checkbox" name="present" checked>
-          Present 
+        <input type="checkbox" name="present" checked />
+        Present
       </label>
-  
+
       <label>
-          <input type="checkbox" name="presentPerfect">
-          Present Perfect
+        <input type="checkbox" name="presentPerfect" />
+        Present Perfect
       </label>
-  
+
       <label>
-          <input type="checkbox" name="imperfect">
-          Imperfect
+        <input type="checkbox" name="imperfect" />
+        Imperfect
       </label>
-  
+
       <label>
-          <input type="checkbox" name="plusPerfect">
-          Plus Perfect
+        <input type="checkbox" name="plusPerfect" />
+        Plus Perfect
       </label>
-  
+
       <label>
-          <input type="checkbox" name="future">
-          Future
+        <input type="checkbox" name="future" />
+        Future
       </label>
-  
+
       <label>
-          <input type="checkbox" name="futurePerfect">
-          Future Perfect
+        <input type="checkbox" name="futurePerfect" />
+        Future Perfect
       </label>
-  
+
       <label>
-          <input type="checkbox" name="simplePast">
-          Simple Past
+        <input type="checkbox" name="simplePast" />
+        Simple Past
       </label>
-  
+
       <label>
-          <input type="checkbox" name="pastPerfect">
-          Past Perfect
+        <input type="checkbox" name="pastPerfect" />
+        Past Perfect
       </label>
-  
+
       <p class="selectTensesTitle">Tense Mastery Selection:</p>
       <p class="selectTensesDescription">Customize your tense practice!</p>
       <button class="startGame2Button">Start</button>
-  </form>
-  <div class="verbsView display1">
-    <p class="displayVerb"></p>
-  <p class="displayTense"></p>
-  <p class="displayPerson"></p>
+    </form>
+    <div class="verbsView display1">
+      <p class="displayVerb"></p>
+      <p class="displayTense"></p>
+      <p class="displayPerson"></p>
 
-  <form class="inputVerbForm">
-    <label class="inputPerson" for="userAnswer"></label>
-    <input type="text" id="userAnswer" name="userAnswer" required>
-    <button class="verbButton" type="submit">Submit</button>
-    <button class="buttonÀ buttonSpecial" onclick="insertLetter('à')" type="button">à</button>
-    <button class="buttonÂ buttonSpecial" type="button">â</button>
-    <button class="buttonÄ buttonSpecial"type="button" >ä</button>
-    <button class="buttonÉ buttonSpecial" type="button">é</button>
-    <button class="buttonÈ buttonSpecial" type="button">è</button>
-    <button class="buttonÊ buttonSpecial" type="button">ê</button>
-    <button class="buttonË buttonSpecial" type="button">ë</button>
-    <button class="buttonÎ buttonSpecial" type="button">î</button>
-    <button class="buttonÏ buttonSpecial" type="button">ï</button>
-    <button class="buttonÔ buttonSpecial" type="button">ô</button>
-    <button class="buttonŒ buttonSpecial" type="button">œ</button>
-    <button class="buttonÙ buttonSpecial" type="button">ù</button>
-    <button class="buttonÛ buttonSpecial" type="button">û</button>
-    <button class="buttonÜ buttonSpecial" type="button">ü</button>
-    <button class="buttonÇ buttonSpecial" type="button">ç</button>
-   
+      <form class="inputVerbForm">
+        <label class="inputPerson" for="userAnswer"></label>
+        <input type="text" id="userAnswer" name="userAnswer" required />
+        <button class="verbButton" type="submit">Submit</button>
+        <button
+          class="buttonÀ buttonSpecial"
+          onclick="insertLetter('à')"
+          type="button"
+        >
+          à
+        </button>
+        <button class="buttonÂ buttonSpecial" type="button">â</button>
+        <button class="buttonÄ buttonSpecial" type="button">ä</button>
+        <button class="buttonÉ buttonSpecial" type="button">é</button>
+        <button class="buttonÈ buttonSpecial" type="button">è</button>
+        <button class="buttonÊ buttonSpecial" type="button">ê</button>
+        <button class="buttonË buttonSpecial" type="button">ë</button>
+        <button class="buttonÎ buttonSpecial" type="button">î</button>
+        <button class="buttonÏ buttonSpecial" type="button">ï</button>
+        <button class="buttonÔ buttonSpecial" type="button">ô</button>
+        <button class="buttonŒ buttonSpecial" type="button">œ</button>
+        <button class="buttonÙ buttonSpecial" type="button">ù</button>
+        <button class="buttonÛ buttonSpecial" type="button">û</button>
+        <button class="buttonÜ buttonSpecial" type="button">ü</button>
+        <button class="buttonÇ buttonSpecial" type="button">ç</button>
+      </form>
 
+      <p class="displayPreviousAnswer"></p>
+      <p class="displayPreviousCorrectAnswer"></p>
+    </div>
 
-</form>
+    <div class="guessWordsView">
+      <div class="buttonOption">
+        <button
+          id="buttonOption1"
+          class="option1Button optionButtons display1"
+        ></button>
+        <button
+          id="buttonOption2"
+          class="option2Button optionButtons display1"
+        ></button>
+        <button
+          id="buttonOption3"
+          class="option3Button optionButtons display1"
+        ></button>
+      </div>
 
-<p class="displayPreviousAnswer">s</p>
-<p class="displayPreviousCorrectAnswer">s</p>
-  </div>
-  
-
-
-</body>
+      <p class="displayWord display1">test</p>
+    </div>
+  </body>
 </html>
