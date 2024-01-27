@@ -6,10 +6,12 @@ import {
   verbsArray,
   timerGame2,
   timerGame3,
+  timerGame4,
   nameGame1,
   nameGame2,
   nameGame3,
   wordsArray2,
+  nameGame4,
 } from "./config.js";
 import substantiveView from "./views/substantiveView.js";
 console.log(wordsArray);
@@ -35,6 +37,9 @@ const verbForm = document.querySelector(".inputVerbForm");
 const buttonOption1 = document.querySelector(".option1Button");
 const buttonOption2 = document.querySelector(".option2Button");
 const buttonOption3 = document.querySelector(".option3Button");
+const buttonOption4 = document.querySelector(".option4Button");
+const buttonOption5 = document.querySelector(".option5Button");
+const buttonOption6 = document.querySelector(".option6Button");
 const displayWord = document.querySelector(".displayWord");
 let currentGame;
 let verbConjugationOutsideScope;
@@ -135,14 +140,29 @@ const displayLeaderboardForm2 = function () {
   verbView.classList.toggle("display1");
   scoreTitle.innerHTML = score;
 };
+
 const displayLeaderboardForm3 = function () {
   buttonOption1.classList.toggle("display1");
   buttonOption2.classList.toggle("display1");
   buttonOption3.classList.toggle("display1");
   leaderboardForm.classList.toggle(`display1`);
+  displayWord.classList.toggle("display1");
   scoreTitle.innerHTML = score;
   displayWord.innerHTML = "";
 };
+
+const displayLeaderboardForm4 = function () {
+  buttonOption4.classList.toggle("display1");
+  buttonOption5.classList.toggle("display1");
+  buttonOption6.classList.toggle("display1");
+  leaderboardForm.classList.toggle(`display1`);
+  displayWord.classList.toggle("display1");
+  scoreTitle.innerHTML = score;
+  displayWord.innerHTML = "";
+};
+
+let storedUserData;
+let parsedUserData;
 export const procesateLeaderBoard1 = function () {
   let playerName = document.querySelector(".playerName").value;
 
@@ -152,10 +172,21 @@ export const procesateLeaderBoard1 = function () {
     game: currentGame,
   };
 
+  // Initialize leaderboard1 if not already initialized
+  let leaderboard1 = JSON.parse(localStorage.getItem("user_data")) || [];
+
   // Push the playerData object into the leaderboard array
   leaderboard1.push(playerData);
 
+  // Store the updated leaderboard1 array
+  localStorage.setItem("user_data", JSON.stringify(leaderboard1));
+
   console.log(leaderboard1);
+
+  // Retrieve and log the stored data
+  let storedUserData = localStorage.getItem("user_data");
+  let parsedUserData = JSON.parse(storedUserData);
+  console.log(parsedUserData);
 
   document.getElementById("leaderboardForm").reset();
 
@@ -325,6 +356,27 @@ export const startGame3 = function () {
   game3();
 };
 
+export const startGame4 = function () {
+  currentGame = nameGame4;
+  setTimeout(displayLeaderboardForm4, timerGame4);
+
+  buttonOption4.classList.toggle("display1");
+  buttonOption5.classList.toggle("display1");
+  buttonOption6.classList.toggle("display1");
+  button1.classList.toggle("display");
+  button2.classList.toggle("display");
+  button3.classList.toggle("display");
+  button4.classList.toggle("display");
+  // console.log(displayWord);
+  displayWord.classList.toggle("display1");
+  score = 0;
+  scoreContainer.classList.toggle("display");
+
+  scoreContainer.innerHTML = `SCORE:${score}`;
+
+  game4();
+};
+
 // Function to get unique random indices
 function getRandomUniqueIndices(max, excludeIndex, count) {
   const indices = [];
@@ -361,6 +413,18 @@ export const procesateGuess3 = function (html) {
   game3();
 };
 
+export const procesateGuess4 = function (html) {
+  if (html === frenchOutsideScope) {
+    score = score + 100;
+    scoreContainer.innerHTML = `SCORE:${score}`;
+  } else {
+    score = score - 100;
+    scoreContainer.innerHTML = `SCORE:${score}`;
+  }
+
+  game4();
+};
+
 const game3 = function () {
   const randomWordIndex = getRandomNumber(wordsArray2.length);
   const randomWord = wordsArray2[randomWordIndex];
@@ -391,4 +455,37 @@ const game3 = function () {
   buttonOption1.innerHTML = englishWords[0];
   buttonOption2.innerHTML = englishWords[1]; // Displaying the English word for the main display word
   buttonOption3.innerHTML = englishWords[2];
+};
+let frenchOutsideScope;
+const game4 = function () {
+  const randomWordIndex1 = getRandomNumber(wordsArray2.length);
+  const randomWord1 = wordsArray2[randomWordIndex1];
+
+  // Display the French word in displayWord element
+  displayWord.innerHTML = randomWord1.english;
+  frenchOutsideScope = randomWord1.french;
+  // Get two unique random indices for the other two buttons
+  const indices = getRandomUniqueIndices(
+    wordsArray2.length,
+    randomWordIndex1,
+    2
+  );
+  const randomIndex1 = indices[0];
+  const randomIndex2 = indices[1];
+
+  // Create an array with the English words
+  const frenchWords = [
+    wordsArray2[randomIndex1].french,
+    randomWord1.french,
+    wordsArray2[randomIndex2].french,
+  ];
+
+  // Shuffle the array to randomize the positions
+  shuffleArray(frenchWords);
+
+  // Set English words for the options buttons
+  buttonOption4.innerHTML = frenchWords[0];
+  buttonOption5.innerHTML = frenchWords[1]; // Displaying the English word for the main display word
+  buttonOption6.innerHTML = frenchWords[2];
+  console.log(buttonOption4.innerHTML);
 };

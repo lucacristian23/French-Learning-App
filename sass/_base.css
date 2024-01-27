@@ -422,6 +422,31 @@ button {
   right: 45px;
   bottom: 150px;
 }
+
+.option4Button {
+  position: absolute;
+  transform: scale(0.6);
+  width: 600px;
+  height: 150px;
+  left: 45px;
+  bottom: 150px;
+}
+.option5Button {
+  position: absolute;
+  transform: scale(0.6);
+  width: 600px;
+  height: 150px;
+  left: 645px;
+  bottom: 150px;
+}
+.option6Button {
+  position: absolute;
+  transform: scale(0.6);
+  width: 600px;
+  height: 150px;
+  right: 45px;
+  bottom: 150px;
+}
 .displayWord {
   position: absolute;
   left: 50%;

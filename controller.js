@@ -4,6 +4,7 @@ import gameModesView from "./views/gameModesView.js";
 import substantiveView from "./views/substantiveView.js";
 import verbView from "./views/verbView.js";
 import wordsView from "./views/wordsView.js";
+import wordsView2 from "./views/wordsView2.js";
 const init = function () {
   startView.displayGameModes(model.generateGameModes);
   gameModesView.displayGame1Description(model.displayGame1);
@@ -24,6 +25,8 @@ const init = function () {
   verbView.introduceSpecialLetter(model.specialButtonsProcesate);
   wordsView.displayGameButtons(model.startGame3);
   wordsView.procesateGuess(model.procesateGuess3);
+  wordsView2.displayGameButtons(model.startGame4);
+  wordsView2.procesateGuess(model.procesateGuess4);
 };
 init();
 
