@@ -27,7 +27,7 @@ const substantiveContainer = document.querySelector(".displaySubstantive");
 const scoreContainer = document.querySelector(".displayScore1");
 const leaderboardForm = document.getElementById("leaderboardForm");
 const scoreTitle = document.querySelector(".scoreTitle");
-const checkBoxes = document.querySelector(".checkBoxes");
+const checkBoxes = document.getElementById("tenseSelectionForm");
 const verbView = document.querySelector(`.verbsView`);
 const displayVerb = document.querySelector(`.displayVerb`);
 const displayTense = document.querySelector(`.displayTense`);
@@ -249,6 +249,7 @@ export const displayCheckBoxesGame2 = function () {
   button4.classList.toggle("display1");
   container.innerHTML = "";
   checkBoxes.classList.toggle("display1");
+  checkBoxes.classList.toggle("checkBoxes");
 };
 let selectedTenses;
 let randomVerb;
@@ -272,6 +273,7 @@ export const startAndProcesateGame2 = function () {
   randomTense = getRandomTense(randomVerb);
   randomPerson = getRandomPerson(randomVerb[randomTense]);
   checkBoxes.classList.toggle("display1");
+  checkBoxes.classList.toggle("checkBoxes");
   //console.log(`Infinitive: ${randomVerb.infinitive}`);
   //console.log(`Tense: ${randomTense}`);
   //console.log(`Person: ${randomPerson}`);
