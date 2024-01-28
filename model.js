@@ -45,10 +45,10 @@ let currentGame;
 let verbConjugationOutsideScope;
 
 export const generateGameModes = function () {
-  button1.classList.toggle("display");
-  button2.classList.toggle("display");
-  button3.classList.toggle("display");
-  button4.classList.toggle("display");
+  button1.classList.toggle("display1");
+  button2.classList.toggle("display1");
+  button3.classList.toggle("display1");
+  button4.classList.toggle("display1");
   franceFlag.classList.toggle("display1");
   startButton.classList.toggle("display1");
 };
@@ -82,13 +82,13 @@ export const removeGame4 = function () {
 };
 
 export const startGame1 = function () {
-  button1.classList.toggle("display");
-  button2.classList.toggle("display");
-  button3.classList.toggle("display");
-  button4.classList.toggle("display");
-  masculineButton.classList.toggle("display");
-  feminineButton.classList.toggle("display");
-  scoreContainer.classList.toggle("display");
+  button1.classList.toggle("display1");
+  button2.classList.toggle("display1");
+  button3.classList.toggle("display1");
+  button4.classList.toggle("display1");
+  masculineButton.classList.toggle("display1");
+  feminineButton.classList.toggle("display1");
+  scoreContainer.classList.toggle("display1");
   container.innerHTML = "";
   currentGame = nameGame1;
   setTimeout(displayLeaderboardForm, timerGame1);
@@ -129,8 +129,8 @@ export const procesateGuess = function () {
 };
 
 const displayLeaderboardForm = function () {
-  masculineButton.classList.toggle("display");
-  feminineButton.classList.toggle("display");
+  masculineButton.classList.toggle("display1");
+  feminineButton.classList.toggle("display1");
   substantiveContainer.innerHTML = "";
   scoreTitle.innerHTML = score;
   leaderboardForm.classList.toggle(`display1`);
@@ -190,20 +190,20 @@ export const procesateLeaderBoard1 = function () {
 
   document.getElementById("leaderboardForm").reset();
 
-  button1.classList.toggle("display");
-  button2.classList.toggle("display");
-  button3.classList.toggle("display");
-  button4.classList.toggle("display");
-  scoreContainer.classList.toggle("display");
+  button1.classList.toggle("display1");
+  button2.classList.toggle("display1");
+  button3.classList.toggle("display1");
+  button4.classList.toggle("display1");
+  scoreContainer.classList.toggle("display1");
   leaderboardForm.classList.toggle(`display1`);
 };
 
 export const procesateSkipButton = function () {
-  button1.classList.toggle("display");
-  button2.classList.toggle("display");
-  button3.classList.toggle("display");
-  button4.classList.toggle("display");
-  scoreContainer.classList.toggle("display");
+  button1.classList.toggle("display1");
+  button2.classList.toggle("display1");
+  button3.classList.toggle("display1");
+  button4.classList.toggle("display1");
+  scoreContainer.classList.toggle("display1");
   leaderboardForm.classList.toggle(`display1`);
 
   score = 0;
@@ -243,10 +243,10 @@ function getRandomPerson(tenseObject) {
 // Example usage
 
 export const displayCheckBoxesGame2 = function () {
-  button1.classList.toggle("display");
-  button2.classList.toggle("display");
-  button3.classList.toggle("display");
-  button4.classList.toggle("display");
+  button1.classList.toggle("display1");
+  button2.classList.toggle("display1");
+  button3.classList.toggle("display1");
+  button4.classList.toggle("display1");
   container.innerHTML = "";
   checkBoxes.classList.toggle("display1");
 };
@@ -262,7 +262,7 @@ export const startAndProcesateGame2 = function () {
     form.querySelectorAll('input[type="checkbox"]:checked')
   ).map((checkbox) => checkbox.name);
 
-  scoreContainer.classList.toggle("display");
+  scoreContainer.classList.toggle("display1");
 
   scoreContainer.innerHTML = `SCORE:${score}`;
   previousAnswer.innerHTML = "";
@@ -343,13 +343,13 @@ export const startGame3 = function () {
   buttonOption1.classList.toggle("display1");
   buttonOption2.classList.toggle("display1");
   buttonOption3.classList.toggle("display1");
-  button1.classList.toggle("display");
-  button2.classList.toggle("display");
-  button3.classList.toggle("display");
-  button4.classList.toggle("display");
+  button1.classList.toggle("display1");
+  button2.classList.toggle("display1");
+  button3.classList.toggle("display1");
+  button4.classList.toggle("display1");
   displayWord.classList.toggle("display1");
   score = 0;
-  scoreContainer.classList.toggle("display");
+  scoreContainer.classList.toggle("display1");
 
   scoreContainer.innerHTML = `SCORE:${score}`;
 
@@ -363,14 +363,14 @@ export const startGame4 = function () {
   buttonOption4.classList.toggle("display1");
   buttonOption5.classList.toggle("display1");
   buttonOption6.classList.toggle("display1");
-  button1.classList.toggle("display");
-  button2.classList.toggle("display");
-  button3.classList.toggle("display");
-  button4.classList.toggle("display");
+  button1.classList.toggle("display1");
+  button2.classList.toggle("display1");
+  button3.classList.toggle("display1");
+  button4.classList.toggle("display1");
   // console.log(displayWord);
   displayWord.classList.toggle("display1");
   score = 0;
-  scoreContainer.classList.toggle("display");
+  scoreContainer.classList.toggle("display1");
 
   scoreContainer.innerHTML = `SCORE:${score}`;
 

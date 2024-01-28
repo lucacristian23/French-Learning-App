@@ -1,6 +1,6 @@
 export const leaderboard1 = [];
-export const timerGame1 = 2000;
-export const timerGame2 = 10000;
+export const timerGame1 = 10000000;
+export const timerGame2 = 20000;
 export const timerGame3 = 5000;
 export const timerGame4 = 10000;
 export const nameGame1 = "Substantive Gender Sprint";
