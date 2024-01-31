@@ -1,12 +1,12 @@
 export const leaderboard1 = [];
-export const timerGame1 = 10000000;
-export const timerGame2 = 20000;
-export const timerGame3 = 5000;
-export const timerGame4 = 10000;
+export const timerGame1 = 2000;
+export const timerGame2 = 2000;
+export const timerGame3 = 2000;
+export const timerGame4 = 2000;
 export const nameGame1 = "Substantive Gender Sprint";
 export const nameGame2 = "Type in the correct form of the verb";
-export const nameGame3 = "Super World Translation Guesser";
-export const nameGame4 = "Super World Translation Guesser French to English ";
+export const nameGame3 = "Word Translation Challenge";
+export const nameGame4 = "Reverse Word Translation Dash";
 export const wordsArray = [
   { word: "livre", english: "book", gender: "M" },
   { word: "maison", english: "house", gender: "F" },

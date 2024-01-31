@@ -5,6 +5,8 @@ import substantiveView from "./views/substantiveView.js";
 import verbView from "./views/verbView.js";
 import wordsView from "./views/wordsView.js";
 import wordsView2 from "./views/wordsView2.js";
+import leaderboardView from "./views/leaderboardView.js";
+import { leaderboard1 } from "./config.js";
 const init = function () {
   startView.displayGameModes(model.generateGameModes);
   gameModesView.displayGame1Description(model.displayGame1);
@@ -27,6 +29,10 @@ const init = function () {
   wordsView.procesateGuess(model.procesateGuess3);
   wordsView2.displayGameButtons(model.startGame4);
   wordsView2.procesateGuess(model.procesateGuess4);
+  leaderboardView.displayLeaderboard(model.renderLeaderboard);
+  leaderboardView.nextGame(model.renderNextGame);
+  leaderboardView.previousGame(model.renderPreviousGame);
+  startView.backButton(model.returnAtStart);
 };
 init();
 

@@ -41,6 +41,14 @@ const buttonOption4 = document.querySelector(".option4Button");
 const buttonOption5 = document.querySelector(".option5Button");
 const buttonOption6 = document.querySelector(".option6Button");
 const displayWord = document.querySelector(".displayWord");
+const leaderboardButton = document.querySelector(".button-leaderboard");
+const leaderboard = document.querySelector(".leaderboard");
+const olElement = document.querySelector(".leaderboard ol");
+const leaderboardHeading = document.querySelector(".leaderboard h1");
+const previousButton = document.querySelector(".previousButton");
+const nextButton = document.querySelector(".nextButton");
+const backButton = document.querySelector(".backButton");
+const gameNames = [nameGame1, nameGame2, nameGame3, nameGame4];
 let currentGame;
 let verbConjugationOutsideScope;
 
@@ -51,31 +59,33 @@ export const generateGameModes = function () {
   button4.classList.toggle("display1");
   franceFlag.classList.toggle("display1");
   startButton.classList.toggle("display1");
+  leaderboardButton.classList.toggle("display1");
+  backButton.classList.toggle("display1");
 };
 const container = document.querySelector(".displayGameInfo");
 export const displayGame1 = function () {
-  container.innerHTML = `Dive into the fascinating world of French noun genders with 'Guess the Gender of the Substantive' mini-game! Test your quick thinking as you race against the clock to identify whether each displayed noun is masculine or feminine. With just one minute on the clock, challenge yourself to make swift decisions, clicking between 'masculine' or 'feminine' buttons for each noun that appears. Enhance your French language skills and have a blast mastering noun genders in this fast-paced, thrilling game!`;
+  container.innerHTML = `Dive into the fascinating world of French noun genders with '${nameGame1}' mini-game! Test your quick thinking as you race against the clock to identify whether each displayed noun is masculine or feminine. With just one minute on the clock, challenge yourself to make swift decisions, clicking between 'masculine' or 'feminine' buttons for each noun that appears. Enhance your French language skills and have a blast mastering noun genders in this fast-paced, thrilling game!`;
 };
 export const removeGame1 = function () {
   container.innerHTML = "";
 };
 export const displayGame2 = function () {
   console.log(container);
-  container.innerHTML = `Dive into rapid-fire French verb conjugation with 'Type the Correct Verb Form'! Confronted with random verbs, tenses, and persons, your challenge is to swiftly type the accurate conjugated form within a dynamic three-minute window. Enhance your verb mastery, typing speed, and accuracy as you race against time. Ready to conquer French grammar? Get typing!`;
+  container.innerHTML = `Dive into rapid-fire French verb conjugation with '${nameGame2}'! Confronted with random verbs, tenses, and persons, your challenge is to swiftly type the accurate conjugated form within a dynamic three-minute window. Enhance your verb mastery, typing speed, and accuracy as you race against time. Ready to conquer French grammar? Get typing!`;
 };
 export const removeGame2 = function () {
   container.innerHTML = "";
 };
 export const displayGame3 = function () {
   console.log(container);
-  container.innerHTML = `Boost your French vocabulary with our rapid 'Image-to-Word' challenge! Identify random images by choosing the correct word from three options. With just two minutes on the clock, immerse yourself in a flurry of visuals and expand your vocabulary. Ready to match images to words? Let's begin!`;
+  container.innerHTML = `Embark on a thrilling two-minute linguistic journey with the '${nameGame3}'! As English words flash on the screen, you're presented with three French options. However, only one holds the correct translation! Quick thinking is essential as you race against time to click on the accurate French translation. Will you conquer this translation challenge within the time limit and enhance your bilingual prowess?`;
 };
 export const removeGame3 = function () {
   container.innerHTML = "";
 };
 export const displayGame4 = function () {
   console.log(container);
-  container.innerHTML = "This is some text inside the container.D";
+  container.innerHTML = `Immerse yourself in the '${nameGame4}' mini-game! As a French word takes center stage, you face three English contenders. Your task? Identify the correct English translation among the options. But here's the twist : once chosen, brace yourself for another round with a new French word and fresh English choices! With only two minutes on the clock, test your linguistic skills and adaptability in this dynamic, fast-paced language challenge. Can you navigate the linguistic maze and emerge victorious? Get ready for a thrilling ride through translation mastery!`;
 };
 export const removeGame4 = function () {
   container.innerHTML = "";
@@ -89,6 +99,7 @@ export const startGame1 = function () {
   masculineButton.classList.toggle("display1");
   feminineButton.classList.toggle("display1");
   scoreContainer.classList.toggle("display1");
+  backButton.classList.toggle("display1");
   container.innerHTML = "";
   currentGame = nameGame1;
   setTimeout(displayLeaderboardForm, timerGame1);
@@ -185,8 +196,6 @@ export const procesateLeaderBoard1 = function () {
 
   // Retrieve and log the stored data
   let storedUserData = localStorage.getItem("user_data");
-  let parsedUserData = JSON.parse(storedUserData);
-  console.log(parsedUserData);
 
   document.getElementById("leaderboardForm").reset();
 
@@ -196,6 +205,7 @@ export const procesateLeaderBoard1 = function () {
   button4.classList.toggle("display1");
   scoreContainer.classList.toggle("display1");
   leaderboardForm.classList.toggle(`display1`);
+  backButton.classList.toggle("display1");
 };
 
 export const procesateSkipButton = function () {
@@ -205,7 +215,7 @@ export const procesateSkipButton = function () {
   button4.classList.toggle("display1");
   scoreContainer.classList.toggle("display1");
   leaderboardForm.classList.toggle(`display1`);
-
+  backButton.classList.toggle("display1");
   score = 0;
   scoreContainer.innerHTML = ``;
   scoreContainer.innerHTML = `SCORE:${score}`;
@@ -243,6 +253,7 @@ function getRandomPerson(tenseObject) {
 // Example usage
 
 export const displayCheckBoxesGame2 = function () {
+  score = 0;
   button1.classList.toggle("display1");
   button2.classList.toggle("display1");
   button3.classList.toggle("display1");
@@ -256,6 +267,7 @@ let randomVerb;
 let randomTense;
 let randomPerson;
 export const startAndProcesateGame2 = function () {
+  backButton.classList.toggle("display1");
   setTimeout(displayLeaderboardForm2, timerGame2);
   const form = document.getElementById("tenseSelectionForm");
   currentGame = nameGame2;
@@ -350,6 +362,7 @@ export const startGame3 = function () {
   button3.classList.toggle("display1");
   button4.classList.toggle("display1");
   displayWord.classList.toggle("display1");
+  backButton.classList.toggle("display1");
   score = 0;
   scoreContainer.classList.toggle("display1");
 
@@ -369,6 +382,7 @@ export const startGame4 = function () {
   button2.classList.toggle("display1");
   button3.classList.toggle("display1");
   button4.classList.toggle("display1");
+  backButton.classList.toggle("display1");
   // console.log(displayWord);
   displayWord.classList.toggle("display1");
   score = 0;
@@ -490,4 +504,78 @@ const game4 = function () {
   buttonOption5.innerHTML = frenchWords[1]; // Displaying the English word for the main display word
   buttonOption6.innerHTML = frenchWords[2];
   console.log(buttonOption4.innerHTML);
+};
+
+const renderSpecificLeaderboard = function (data) {
+  olElement.innerHTML = `${data
+    .map(
+      (currentValue) =>
+        `<li>
+    <mark>${currentValue.playerName}</mark>
+    <small>${currentValue.score}</small>
+  </li>`
+    )
+    .join(" ")}`;
+};
+
+const sortLeaderboardTop5 = function (data, gameWanted) {
+  let specificGameData = data.filter((obj) => obj.game === gameWanted);
+
+  specificGameData.sort((a, b) => b.score - a.score);
+
+  return specificGameData.slice(0, 5);
+};
+let currentLeaderBoard = 1;
+export const renderLeaderboard = function () {
+  franceFlag.classList.toggle("display1");
+  startButton.classList.toggle("display1");
+  leaderboardButton.classList.toggle("display1");
+  leaderboard.classList.toggle("display1");
+  backButton.classList.toggle("display1");
+  if (currentLeaderBoard === 1) previousButton.classList.add("display1");
+  if (currentLeaderBoard === 4) nextButton.classList.add("display1");
+  // renderSpecificLeaderboard(sortLeaderboardTop5(parsedUserData, nameGame4));
+  addLeaderBoard(gameNames[currentLeaderBoard - 1]);
+};
+
+const addLeaderBoard = function (gameName) {
+  leaderboardHeading.textContent = gameName;
+  let storedUserData = localStorage.getItem("user_data");
+  let parsedUserData = JSON.parse(storedUserData);
+
+  renderSpecificLeaderboard(sortLeaderboardTop5(parsedUserData, gameName));
+};
+
+export const renderNextGame = function () {
+  currentLeaderBoard++;
+  nextButton.classList.remove("display1");
+  previousButton.classList.remove("display1");
+  if (currentLeaderBoard === 4) nextButton.classList.add("display1");
+
+  console.log(gameNames[currentLeaderBoard - 1]);
+  addLeaderBoard(gameNames[currentLeaderBoard - 1]);
+};
+
+export const renderPreviousGame = function () {
+  currentLeaderBoard--;
+  nextButton.classList.remove("display1");
+  previousButton.classList.remove("display1");
+  if (currentLeaderBoard === 1) previousButton.classList.add("display1");
+
+  console.log(gameNames[currentLeaderBoard - 1]);
+  addLeaderBoard(gameNames[currentLeaderBoard - 1]);
+};
+
+export const returnAtStart = function () {
+  button1.classList.add("display1");
+  button2.classList.add("display1");
+  button3.classList.add("display1");
+  button4.classList.add("display1");
+  franceFlag.classList.remove("display1");
+  startButton.classList.remove("display1");
+  leaderboardButton.classList.remove("display1");
+  backButton.classList.add("display1");
+  leaderboard.classList.add("display1");
+  checkBoxes.classList.add("display1");
+  checkBoxes.classList.remove("checkBoxes");
 };
