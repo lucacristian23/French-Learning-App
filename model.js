@@ -49,6 +49,7 @@ const previousButton = document.querySelector(".previousButton");
 const nextButton = document.querySelector(".nextButton");
 const backButton = document.querySelector(".backButton");
 const gameNames = [nameGame1, nameGame2, nameGame3, nameGame4];
+const errorMessage = document.querySelector(".errorTense");
 let currentGame;
 let verbConjugationOutsideScope;
 
@@ -71,7 +72,7 @@ export const removeGame1 = function () {
 };
 export const displayGame2 = function () {
   console.log(container);
-  container.innerHTML = `Dive into rapid-fire French verb conjugation with '${nameGame2}'! Confronted with random verbs, tenses, and persons, your challenge is to swiftly type the accurate conjugated form within a dynamic three-minute window. Enhance your verb mastery, typing speed, and accuracy as you race against time. Ready to conquer French grammar? Get typing!`;
+  container.innerHTML = `Dive into rapid-fire French verb conjugation with '${nameGame2}'! Confronted with random verbs, tenses, and persons, your challenge is to swiftly type the accurate conjugated form within a dynamic three-minute window. Enhance your verb mastery, typing speed, and accuracy as you race against time. Ready to conquer French grammar? Get typing, you only have 3 minutes!`;
 };
 export const removeGame2 = function () {
   container.innerHTML = "";
@@ -267,13 +268,20 @@ let randomVerb;
 let randomTense;
 let randomPerson;
 export const startAndProcesateGame2 = function () {
-  backButton.classList.toggle("display1");
-  setTimeout(displayLeaderboardForm2, timerGame2);
   const form = document.getElementById("tenseSelectionForm");
-  currentGame = nameGame2;
   selectedTenses = Array.from(
     form.querySelectorAll('input[type="checkbox"]:checked')
   ).map((checkbox) => checkbox.name);
+
+  if (selectedTenses.length === 0) {
+    displayError();
+    return;
+  }
+
+  backButton.classList.toggle("display1");
+  setTimeout(displayLeaderboardForm2, timerGame2);
+
+  currentGame = nameGame2;
 
   scoreContainer.classList.toggle("display1");
 
@@ -325,18 +333,12 @@ export const procesateAnswer = function (answer) {
   displayVerb.innerHTML = randomVerb.infinitive;
   userAnswerLabel.innerText = `${randomPerson}`;
 };
-//const displayVerb = document.querySelector(`.displayVerb`)
-//const displayTense = document.querySelector(`.displayTense`)
-//const displayPerson = document.querySelector(`.displayPerson`)
-// export const insertLetter=function(letter) {
-//  const inputField = document.getElementById('userAnswer');
-// const cursorPos = inputField.selectionStart;
-// const textBefore = inputField.value.substring(0, cursorPos);
-// const textAfter = inputField.value.substring(cursorPos);
-//  inputField.value = textBefore + letter + textAfter;
-//  inputField.focus();
-// inputField.setSelectionRange(cursorPos + 1, cursorPos + 1);
-// }
+const displayError = function () {
+  errorMessage.classList.toggle("display1");
+  setTimeout(function () {
+    errorMessage.classList.toggle("display1");
+  }, 3000);
+};
 
 export const specialButtonsProcesate = function (letter) {
   console.log(`Clicked special button with letter: ${letter}`);

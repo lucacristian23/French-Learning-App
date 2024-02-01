@@ -1551,3 +1551,11 @@ buttonSubmit .verbButton:hover,
 .backButton:focus {
   opacity: 0.75;
 }
+
+.errorTense {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
