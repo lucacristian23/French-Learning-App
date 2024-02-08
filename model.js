@@ -50,6 +50,7 @@ const nextButton = document.querySelector(".nextButton");
 const backButton = document.querySelector(".backButton");
 const gameNames = [nameGame1, nameGame2, nameGame3, nameGame4];
 const errorMessage = document.querySelector(".errorTense");
+const submitEarly = document.querySelector(".earlySubmit");
 let currentGame;
 let verbConjugationOutsideScope;
 
@@ -101,10 +102,12 @@ export const startGame1 = function () {
   feminineButton.classList.toggle("display1");
   scoreContainer.classList.toggle("display1");
   backButton.classList.toggle("display1");
+  submitEarly.classList.toggle("display1");
   container.innerHTML = "";
   currentGame = nameGame1;
-  setTimeout(displayLeaderboardForm, timerGame1);
+  timeout1 = setTimeout(displayLeaderboardForm, timerGame1);
   displayRandomSubstantive();
+  startTimer(timerGame1 / 1000, true);
 };
 let randomOutsideScope;
 export const displayRandomSubstantive = function () {
@@ -141,34 +144,42 @@ export const procesateGuess = function () {
 };
 
 const displayLeaderboardForm = function () {
+  clearTimeout(timeout1);
   masculineButton.classList.toggle("display1");
   feminineButton.classList.toggle("display1");
+  submitEarly.classList.toggle("display1");
   substantiveContainer.innerHTML = "";
   scoreTitle.innerHTML = score;
   leaderboardForm.classList.toggle(`display1`);
 };
 const displayLeaderboardForm2 = function () {
+  clearTimeout(timeout2);
   leaderboardForm.classList.toggle(`display1`);
   verbView.classList.toggle("display1");
+  submitEarly.classList.toggle("display1");
   scoreTitle.innerHTML = score;
 };
 
 const displayLeaderboardForm3 = function () {
+  clearTimeout(timeout3);
   buttonOption1.classList.toggle("display1");
   buttonOption2.classList.toggle("display1");
   buttonOption3.classList.toggle("display1");
   leaderboardForm.classList.toggle(`display1`);
   displayWord.classList.toggle("display1");
+  submitEarly.classList.toggle("display1");
   scoreTitle.innerHTML = score;
   displayWord.innerHTML = "";
 };
 
 const displayLeaderboardForm4 = function () {
+  clearTimeout(timeout4);
   buttonOption4.classList.toggle("display1");
   buttonOption5.classList.toggle("display1");
   buttonOption6.classList.toggle("display1");
   leaderboardForm.classList.toggle(`display1`);
   displayWord.classList.toggle("display1");
+  submitEarly.classList.toggle("display1");
   scoreTitle.innerHTML = score;
   displayWord.innerHTML = "";
 };
@@ -268,6 +279,7 @@ let randomVerb;
 let randomTense;
 let randomPerson;
 export const startAndProcesateGame2 = function () {
+  submitEarly.classList.toggle("display1");
   const form = document.getElementById("tenseSelectionForm");
   selectedTenses = Array.from(
     form.querySelectorAll('input[type="checkbox"]:checked')
@@ -277,9 +289,9 @@ export const startAndProcesateGame2 = function () {
     displayError();
     return;
   }
-
+  startTimer(timerGame2 / 1000, true);
   backButton.classList.toggle("display1");
-  setTimeout(displayLeaderboardForm2, timerGame2);
+  timeout2 = setTimeout(displayLeaderboardForm2, timerGame2);
 
   currentGame = nameGame2;
 
@@ -354,8 +366,8 @@ export const specialButtonsProcesate = function (letter) {
 let englishOutsideScope;
 export const startGame3 = function () {
   currentGame = nameGame3;
-  setTimeout(displayLeaderboardForm3, timerGame3);
-
+  timeout3 = setTimeout(displayLeaderboardForm3, timerGame3);
+  startTimer(timerGame3 / 1000, true);
   buttonOption1.classList.toggle("display1");
   buttonOption2.classList.toggle("display1");
   buttonOption3.classList.toggle("display1");
@@ -365,6 +377,7 @@ export const startGame3 = function () {
   button4.classList.toggle("display1");
   displayWord.classList.toggle("display1");
   backButton.classList.toggle("display1");
+  submitEarly.classList.toggle("display1");
   score = 0;
   scoreContainer.classList.toggle("display1");
 
@@ -375,8 +388,8 @@ export const startGame3 = function () {
 
 export const startGame4 = function () {
   currentGame = nameGame4;
-  setTimeout(displayLeaderboardForm4, timerGame4);
-
+  timeout4 = setTimeout(displayLeaderboardForm4, timerGame4);
+  startTimer(timerGame4 / 1000, true);
   buttonOption4.classList.toggle("display1");
   buttonOption5.classList.toggle("display1");
   buttonOption6.classList.toggle("display1");
@@ -385,6 +398,7 @@ export const startGame4 = function () {
   button3.classList.toggle("display1");
   button4.classList.toggle("display1");
   backButton.classList.toggle("display1");
+  submitEarly.classList.toggle("display1");
   // console.log(displayWord);
   displayWord.classList.toggle("display1");
   score = 0;
@@ -579,5 +593,62 @@ export const returnAtStart = function () {
   backButton.classList.add("display1");
   leaderboard.classList.add("display1");
   checkBoxes.classList.add("display1");
+  submitEarly.classList.add("display1");
   checkBoxes.classList.remove("checkBoxes");
+};
+
+let timerInterval; // Declare timerInterval outside the function to access it later
+
+const startTimer = function (totalSeconds, start) {
+  // Get the timer element
+  const timerElement = document.querySelector(".timer");
+
+  // Reset the timer if start is false or undefined
+  if (!start) {
+    clearInterval(timerInterval);
+    timerElement.textContent = "";
+    return; // Exit the function
+  }
+
+  // Set the initial timer value in seconds
+  let timerValue = totalSeconds;
+
+  // Function to update the timer
+  function updateTimer() {
+    // Check if the timer has reached 0
+    if (timerValue <= 0) {
+      clearInterval(timerInterval); // Stop the timer if it reaches 0
+      timerElement.textContent = ""; // Clear the timer element
+    } else {
+      // Calculate minutes and seconds
+      const minutes = Math.floor(timerValue / 60);
+      const seconds = timerValue % 60;
+
+      // Display the timer in MM:SS format
+      timerElement.textContent = `${minutes
+        .toString()
+        .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+      // Decrement the timer value
+      timerValue--;
+    }
+  }
+
+  // Call updateTimer immediately to display the initial timer value
+  updateTimer();
+
+  // Call updateTimer every second
+  timerInterval = setInterval(updateTimer, 1000);
+};
+
+export const earlySubmit = function () {
+  startTimer(null, false);
+
+  if (currentGame === nameGame1) displayLeaderboardForm();
+
+  if (currentGame === nameGame2) displayLeaderboardForm2();
+
+  if (currentGame === nameGame3) displayLeaderboardForm3();
+
+  if (currentGame === nameGame4) displayLeaderboardForm4();
 };

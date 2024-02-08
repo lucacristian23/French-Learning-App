@@ -33,6 +33,7 @@ const init = function () {
   leaderboardView.nextGame(model.renderNextGame);
   leaderboardView.previousGame(model.renderPreviousGame);
   startView.backButton(model.returnAtStart);
+  startView.earlySubmitButton(model.earlySubmit);
 };
 init();
 
