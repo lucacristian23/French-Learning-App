@@ -51,6 +51,10 @@ const backButton = document.querySelector(".backButton");
 const gameNames = [nameGame1, nameGame2, nameGame3, nameGame4];
 const errorMessage = document.querySelector(".errorTense");
 const submitEarly = document.querySelector(".earlySubmit");
+let timeout1Scope;
+let timeout2Scope;
+let timeout3Scope;
+let timeout4Scope;
 let currentGame;
 let verbConjugationOutsideScope;
 
@@ -105,7 +109,8 @@ export const startGame1 = function () {
   submitEarly.classList.toggle("display1");
   container.innerHTML = "";
   currentGame = nameGame1;
-  timeout1 = setTimeout(displayLeaderboardForm, timerGame1);
+  let timeout1 = setTimeout(displayLeaderboardForm, timerGame1);
+  timeout1Scope = timeout1;
   displayRandomSubstantive();
   startTimer(timerGame1 / 1000, true);
 };
@@ -144,7 +149,7 @@ export const procesateGuess = function () {
 };
 
 const displayLeaderboardForm = function () {
-  clearTimeout(timeout1);
+  clearTimeout(timeout1Scope);
   masculineButton.classList.toggle("display1");
   feminineButton.classList.toggle("display1");
   submitEarly.classList.toggle("display1");
@@ -153,7 +158,7 @@ const displayLeaderboardForm = function () {
   leaderboardForm.classList.toggle(`display1`);
 };
 const displayLeaderboardForm2 = function () {
-  clearTimeout(timeout2);
+  clearTimeout(timeout2Scope);
   leaderboardForm.classList.toggle(`display1`);
   verbView.classList.toggle("display1");
   submitEarly.classList.toggle("display1");
@@ -161,7 +166,7 @@ const displayLeaderboardForm2 = function () {
 };
 
 const displayLeaderboardForm3 = function () {
-  clearTimeout(timeout3);
+  clearTimeout(timeout3Scope);
   buttonOption1.classList.toggle("display1");
   buttonOption2.classList.toggle("display1");
   buttonOption3.classList.toggle("display1");
@@ -173,7 +178,7 @@ const displayLeaderboardForm3 = function () {
 };
 
 const displayLeaderboardForm4 = function () {
-  clearTimeout(timeout4);
+  clearTimeout(timeout4Scope);
   buttonOption4.classList.toggle("display1");
   buttonOption5.classList.toggle("display1");
   buttonOption6.classList.toggle("display1");
@@ -279,7 +284,6 @@ let randomVerb;
 let randomTense;
 let randomPerson;
 export const startAndProcesateGame2 = function () {
-  submitEarly.classList.toggle("display1");
   const form = document.getElementById("tenseSelectionForm");
   selectedTenses = Array.from(
     form.querySelectorAll('input[type="checkbox"]:checked')
@@ -291,8 +295,9 @@ export const startAndProcesateGame2 = function () {
   }
   startTimer(timerGame2 / 1000, true);
   backButton.classList.toggle("display1");
-  timeout2 = setTimeout(displayLeaderboardForm2, timerGame2);
-
+  submitEarly.classList.toggle("display1");
+  let timeout2 = setTimeout(displayLeaderboardForm2, timerGame2);
+  timeout2Scope = timeout2;
   currentGame = nameGame2;
 
   scoreContainer.classList.toggle("display1");
@@ -366,7 +371,8 @@ export const specialButtonsProcesate = function (letter) {
 let englishOutsideScope;
 export const startGame3 = function () {
   currentGame = nameGame3;
-  timeout3 = setTimeout(displayLeaderboardForm3, timerGame3);
+  let timeout3 = setTimeout(displayLeaderboardForm3, timerGame3);
+  timeout3Scope = timeout3;
   startTimer(timerGame3 / 1000, true);
   buttonOption1.classList.toggle("display1");
   buttonOption2.classList.toggle("display1");
@@ -388,7 +394,8 @@ export const startGame3 = function () {
 
 export const startGame4 = function () {
   currentGame = nameGame4;
-  timeout4 = setTimeout(displayLeaderboardForm4, timerGame4);
+  let timeout4 = setTimeout(displayLeaderboardForm4, timerGame4);
+  timeout4Scope = timeout4;
   startTimer(timerGame4 / 1000, true);
   buttonOption4.classList.toggle("display1");
   buttonOption5.classList.toggle("display1");

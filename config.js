@@ -3,6 +3,7 @@ export const timerGame1 = 60000;
 export const timerGame2 = 180000;
 export const timerGame3 = 120000;
 export const timerGame4 = 120000;
+console.log("testconfig");
 export const nameGame1 = "Substantive Gender Sprint";
 export const nameGame2 = "Type in the correct form of the verb";
 export const nameGame3 = "Word Translation Challenge";

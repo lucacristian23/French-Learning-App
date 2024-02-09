@@ -2,10 +2,10 @@
   "name": "french-learning-game",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./darkus"
   },
   "author": "Luca Cristian",
   "license": "ISC",
