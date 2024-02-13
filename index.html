@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="sass/_new.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script type="module" defer src="controller.js"></script>
-    <link rel="stylesheet" href="sass/_base.css" />
+
     <link rel="shortcut icon" href="download (15).png" type="image/x-icon" />
     <title>French Learning Game</title>
   </head>
@@ -18,10 +19,10 @@
     />
     <button class="button">Game Modes</button>
     <button class="button-leaderboard">Leaderboards</button>
-    <button class="dice-button dice-button1 display1">
+    <button class="display1 display dice-button dice-button1">
       Substantive Gender Sprint
     </button>
-    <button class="dice-button dice-button2 display1">
+    <button class="dice-button display dice-button2 display1">
       Type in the correct form of the verb
     </button>
     <button class="dice-button dice-button3 display1">
@@ -45,7 +46,10 @@
     </div>
 
     <div class="displaySubstantive"></div>
-    <div class="displayScore1 display1">SCORE:0</div>
+    <div class="displayScore1 display1">
+      <div class="timer"></div>
+      SCORE:0
+    </div>
     <form class="display1" id="leaderboardForm">
       <p class="leaderboardTitle">Submit your score to the leaderboard!</p>
       <label class="labelPlayer" for="playerName">Enter your name:</label>

@@ -14,13 +14,14 @@ import {
   nameGame4,
 } from "./config.js";
 import substantiveView from "./views/substantiveView.js";
-console.log(wordsArray);
+
 const button1 = document.querySelector(".dice-button1");
 const button2 = document.querySelector(".dice-button2");
 const button3 = document.querySelector(".dice-button3");
 const button4 = document.querySelector(".dice-button4");
 const franceFlag = document.querySelector(".image-above");
 const startButton = document.querySelector(".button");
+const container = document.querySelector(".displayGameInfo");
 const masculineButton = document.querySelector(".masculine-button");
 const feminineButton = document.querySelector(".feminine-button");
 const substantiveContainer = document.querySelector(".displaySubstantive");
@@ -68,7 +69,7 @@ export const generateGameModes = function () {
   leaderboardButton.classList.toggle("display1");
   backButton.classList.toggle("display1");
 };
-const container = document.querySelector(".displayGameInfo");
+
 export const displayGame1 = function () {
   container.innerHTML = `Dive into the fascinating world of French noun genders with '${nameGame1}' mini-game! Test your quick thinking as you race against the clock to identify whether each displayed noun is masculine or feminine. With just one minute on the clock, challenge yourself to make swift decisions, clicking between 'masculine' or 'feminine' buttons for each noun that appears. Enhance your French language skills and have a blast mastering noun genders in this fast-paced, thrilling game!`;
 };

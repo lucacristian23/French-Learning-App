@@ -1,5 +1,5 @@
 export const leaderboard1 = [];
-export const timerGame1 = 60000;
+export const timerGame1 = 6000000;
 export const timerGame2 = 180000;
 export const timerGame3 = 120000;
 export const timerGame4 = 120000;

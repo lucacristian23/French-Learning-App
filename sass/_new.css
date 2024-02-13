@@ -1,0 +1,609 @@
+body {
+  min-height: 450px;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #f39264 0%,
+    #f2606f 100%
+  );
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #6912bb 0%, #1098f3 100%);
+  /*display: flex; sa rezolv cu DICE BUTTONS*/
+  align-items: center;
+  justify-content: center;
+}
+
+.image-above {
+  display: block;
+  position: absolute;
+  top: 16vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 576px) {
+  .image-above {
+    width: 50%; /* Adjust the width as needed */
+    max-width: 300px; /* Adjust the maximum width as needed */
+  }
+}
+.button {
+  /* Attributes to adjust for different device sizes */
+  top: 45vh; /* Adjust this value based on the height of the flag */
+  height: 10vh; /* Adjust the button height as needed */
+  width: 31%; /* Adjust the button width as needed */
+  font-size: 6vh; /* Adjust the font size as needed */
+
+  /* Remaining CSS attributes */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 1vh;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+}
+
+.button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateX(-50%) translateY(-0.3vh);
+}
+
+.button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateX(-50%) translateY(0.3vh);
+}
+@media (max-width: 576px) {
+  .button {
+    top: 45vh; /* Adjust this value based on the height of the flag */
+    height: 10vh; /* Adjust the button height as needed */
+    width: 80%; /* Adjust the button width as needed */
+    font-size: 5vh; /* Adjust the font size as needed */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .button {
+    top: 45vh; /* Adjust this value based on the height of the flag */
+    height: 10vh; /* Adjust the button height as needed */
+    width: 75%; /* Adjust the button width as needed */
+    font-size: 6vh; /* Adjust the font size as needed */
+  }
+}
+
+.button-leaderboard {
+  /* Attributes that may need adjustment for different device sizes */
+  top: 58vh;
+  height: 10vh;
+  width: 31%;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  font-size: 6vh;
+
+  /* Complete CSS class with adjusted attributes */
+  position: absolute;
+  top: 58vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 1vh;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+}
+
+.button-leaderboard:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-leaderboard:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateX(-50%) translateY(-0.3vh);
+}
+
+.button-leaderboard:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateX(-50%) translateY(0.3vh);
+}
+
+@media (max-width: 576px) {
+  .button-leaderboard {
+    top: 58vh; /* Adjust this value based on the height of the flag */
+    height: 10vh; /* Adjust the button height as needed */
+    width: 80%; /* Adjust the button width as needed */
+    font-size: 5vh; /* Adjust the font size as needed */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .button-leaderboard {
+    top: 58vh; /* Adjust this value based on the height of the flag */
+    height: 10vh; /* Adjust the button height as needed */
+    width: 75%; /* Adjust the button width as needed */
+    font-size: 6vh; /* Adjust the font size as needed */
+  }
+}
+
+.dice-button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 11vh; /* Adjust the button height as needed */
+  width: 26vw; /* Adjust the button width as needed */
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+}
+
+.dice-button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.dice-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.dice-button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .dice-button {
+    width: 33vw;
+  }
+}
+
+/* Positioning for each dice button */
+.dice-button1 {
+  top: 6%; /* Adjust the distance from the top as needed */
+  left: 15%; /* Adjust the distance from the left as needed */
+  position: absolute;
+  font-size: 3vh; /* Adjust the font size as needed */
+}
+
+@media (max-width: 576px) {
+  .dice-button1 {
+    font-size: 0.8vh; /* Adjust the font size as needed */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .dice-button1 {
+    font-size: 1.7vh;
+  }
+}
+.dice-button2 {
+  top: 6%; /* Adjust the distance from the top as needed */
+  right: 15%; /* Adjust the distance from the right as needed */
+  position: absolute;
+  font-size: 2vh; /* Adjust the font size as needed */
+}
+
+@media (max-width: 576px) {
+  .dice-button2 {
+    font-size: 0.6vh; /* Adjust the font size as needed */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .dice-button2 {
+    font-size: 1.2vh;
+  }
+}
+
+.dice-button3 {
+  bottom: 6%; /* Adjust the distance from the bottom as needed */
+  left: 15%; /* Adjust the distance from the left as needed */
+  position: absolute;
+  font-size: 3vh; /* Adjust the font size as needed */
+}
+
+@media (max-width: 576px) {
+  .dice-button3 {
+    font-size: 0.8vh; /* Adjust the font size as needed */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .dice-button3 {
+    font-size: 1.6vh;
+  }
+}
+
+.dice-button4 {
+  bottom: 6%; /* Adjust the distance from the bottom as needed */
+  right: 15%; /* Adjust the distance from the right as needed */
+  position: absolute;
+  font-size: 2.4vh; /* Adjust the font size as needed */
+}
+
+@media (max-width: 576px) {
+  .dice-button4 {
+    font-size: 0.7vh; /* Adjust the font size as needed */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .dice-button4 {
+    font-size: 1.5vh;
+  }
+}
+
+.displayGameInfo {
+  width: 70%; /* Adjust width as needed */
+  height: 50%; /* Adjust height as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  color: rgb(48, 10, 10);
+  font-size: 4.5vh; /* Adjust font size for responsiveness */
+  font-family: "Didot", serif;
+
+  /* border: 2px solid red;  
+  box-sizing: border-box; */
+}
+
+.backButton {
+  left: 2%; /* Adjust left position relative to the viewport width */
+  bottom: 5%; /* Adjust bottom position relative to the viewport height */
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9vw; /* Adjust font size relative to the viewport width */
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 3vh; /* Adjust minimum height relative to the viewport height */
+  min-width: 10%; /* Adjust minimum width relative to the viewport width */
+  outline: none;
+  overflow: hidden;
+  padding: 0.5vw 1vw; /* Adjust padding relative to the viewport width */
+  position: absolute;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 2%; /* Adjust width relative to the viewport width */
+}
+
+.backButton:hover,
+.backButton:focus {
+  opacity: 0.75;
+}
+
+@media (max-width: 576px) {
+  .backButton {
+    font-size: 1vh; /* Adjust the font size as needed */
+  }
+}
+
+.btnGender {
+  line-height: 8vh;
+  vertical-align: middle;
+  text-align: center;
+
+  cursor: pointer;
+
+  font-size: 2.2vw;
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  color: rgb(14, 11, 11);
+  bottom: 12vw;
+  width: 27%;
+  height: 5vw;
+}
+
+@media (max-width: 576px) {
+  .btnGender {
+    line-height: 4vh;
+    bottom: 61vw;
+    width: 32%;
+    height: 9vw;
+    font-size: 2.6vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .btnGender {
+    line-height: 4vh;
+    bottom: 36vw;
+    width: 32%;
+    height: 7vw;
+    font-size: 2.6vw;
+  }
+}
+
+.btn-msc {
+  background-color: #01aa48;
+  transition: all 0.3s;
+  position: relative;
+  position: absolute;
+
+  left: 15%;
+
+  text-align: center;
+  padding-top: 1vw;
+}
+.btn-msc span {
+  transition: all 0.3s;
+}
+.btn-msc::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 0.1vw;
+  border-bottom-width: 0.1vw;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+.btn-msc:hover span {
+  letter-spacing: 0.1vw;
+}
+.btn-msc:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-msc::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-msc:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+.btn-fmn {
+  background-color: #831583;
+  transition: all 0.3s;
+  position: relative;
+  position: absolute;
+  right: 15%;
+
+  text-align: center;
+  padding-top: 1vw;
+}
+.btn-fmn span {
+  transition: all 0.3s;
+}
+.btn-fmn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 0.1vw;
+  border-bottom-width: 0.1vw;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+.btn-fmn:hover span {
+  letter-spacing: 0.1vw;
+}
+.btn-fmn:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-fmn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-fmn:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+.displaySubstantive {
+  /* Responsive Design Attributes */
+  top: 8%; /* Adjust top position as needed */
+  width: 100%; /* Adjust width as needed */
+  max-width: 90%; /* Adjust max-width as needed */
+  height: auto; /* Adjust height as needed */
+  font-size: 5vw; /* Adjust font size for responsiveness */
+
+  /* Centering Horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Other Attributes */
+  position: absolute;
+  pointer-events: none;
+  color: rgb(48, 10, 10);
+  font-family: "Didot", serif; /* Default font family */
+  text-align: center; /* Default text alignment */
+}
+
+@media (max-width: 576px) {
+  .displaySubstantive {
+    top: 17%; /* Adjust top position as needed */
+    width: 100%; /* Adjust width as needed */
+    max-width: 80%; /* Adjust max-width as needed */
+    height: auto; /* Adjust height as needed */
+    font-size: 19vw; /* Adjust font size for responsiveness */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .displaySubstantive {
+    top: 8%; /* Adjust top position as needed */
+    width: 100%; /* Adjust width as needed */
+    max-width: 80%; /* Adjust max-width as needed */
+    height: auto; /* Adjust height as needed */
+    font-size: 11vw; /* Adjust font size for responsiveness */
+  }
+}
+
+.displayScore1 {
+  position: absolute;
+  width: 4vw; /* Adjust width as needed */
+  height: 7.5vh; /* Adjust height as needed */
+  pointer-events: none;
+  bottom: 4vh;
+  right: 13%; /* Adjust the value to move it more to the right */
+  color: rgb(48, 10, 10);
+  font-size: 4.5vh;
+  /*border: 2px solid red;  Add border with red color 
+  box-sizing: border-box;  Ensure border is included in width and height */
+}
+
+@media (max-width: 576px) {
+  .displayScore1 {
+    width: 30vw; /* Adjust width as needed */
+    height: 9.5vh; /* Adjust height as needed */
+    bottom: 9vh;
+    right: 9%; /* Adjust the value to move it more to the right */
+    font-size: 3vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .displayScore1 {
+    width: 30vw; /* Adjust width as needed */
+    height: 9.5vh; /* Adjust height as needed */
+    bottom: 9vh;
+    right: 3%; /* Adjust the value to move it more to the right */
+    font-size: 4.5vh;
+  }
+}
+
+.timer {
+  position: absolute;
+  width: 6vw; /* Adjust width as needed */
+  height: 7.5vh; /* Adjust height as needed */
+  bottom: 0vh;
+  right: 22vh;
+  color: rgb(48, 10, 10);
+  font-size: 4.5vh; /* Adjust font size as needed */
+}
+
+.display1 {
+  display: none;
+}
