@@ -1,0 +1,238 @@
+.optionButtons1 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01, sans-serif;
+  font-size: 7vh;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 8vh;
+  margin: 0;
+  min-height: 8vh;
+  outline: none;
+  overflow: visible;
+  padding: 2.3vh 3.2vh;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .optionButtons1 {
+    padding: 2.4vh 4vh;
+  }
+}
+
+.optionButtons1:before,
+.optionButtons1:after {
+  border-radius: 10vh;
+}
+
+.optionButtons1:before {
+  background-image: linear-gradient(92.83deg, #227fe9 0, #0f41c9 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.optionButtons1:after {
+  background-color: initial;
+  background-image: linear-gradient(#1b27d8 0, #216b6b 100%);
+  bottom: 0.5vh;
+  content: "";
+  display: block;
+  left: 0.5vh;
+  overflow: hidden;
+  position: absolute;
+  right: 0.5vh;
+  top: 0.5vh;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.optionButtons1:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, #227fe9 0%, #0f41c9 100%);
+}
+
+.optionButtons1:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.optionButtons1:active:not(:disabled) {
+  color: #ccc;
+}
+
+.optionButtons1:active:not(:disabled):before {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #227fe9 0, #0f41c9 100%);
+}
+
+.optionButtons1:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 0.5vh;
+  left: 0.5vh;
+  right: 0.5vh;
+  top: 0.5vh;
+}
+
+.optionButtons1:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+.button-container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 27vh;
+  gap: -40vh;
+}
+
+@media (min-width: 768px) {
+  .optionButtons1 {
+    padding: 19px 32px;
+  }
+}
+
+.optionButtons1 {
+  transform: scale(0.6);
+  height: 18.75vh;
+  font-size: 6vh;
+}
+
+.option4Button {
+  width: 30%;
+}
+
+.option5Button {
+  width: 30%;
+}
+
+.option6Button {
+  width: 30%;
+}
+
+@media (max-width: 576px) {
+  .button-container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 27vh;
+
+    padding: 0px; /* Adjust padding to align buttons with the border */
+  }
+
+  .optionButtons1 {
+    margin-right: auto;
+
+    height: 7.75vh;
+    width: 17vh;
+    font-size: 2vh;
+    transform: scale(0.6);
+    padding: 5px 10px; /* Adjust the values as needed */
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .button-container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 8vh;
+  }
+
+  .optionButtons1 {
+    font-size: 5vh;
+    transform: scale(0.6);
+    height: 9.75vh;
+    flex: 1; /* Allow buttons to evenly distribute within the container */
+  }
+
+  .option4Button,
+  .option5Button,
+  .option6Button {
+    width: 33.33%; /* Each button takes up one-third of the container width */
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .option4Button {
+    position: absolute;
+    transform: scale(0.4);
+    width: 45vh;
+    height: 16.25vh;
+    left: -7%;
+    bottom: 24vh;
+  }
+  .option5Button {
+    position: absolute;
+    transform: scale(0.4);
+    width: 45vh;
+    height: 16.25vh;
+    left: 20.5%;
+    bottom: 24vh;
+  }
+  .option6Button {
+    position: absolute;
+    transform: scale(0.4);
+    width: 45vh;
+    height: 16.25vh;
+    left: 49%;
+    bottom: 24vh;
+  }
+}
+
+.displayWord {
+  position: absolute;
+  left: 50%;
+  top: 1vh;
+  transform: translate(-50%, -50%);
+  font-size: 18vh;
+}
+
+@media (min-width: 768px) {
+  .optionButtons1 {
+    padding: 2.4vh 4vh;
+  }
+}
+
+.optionButtons1:before,
+.optionButtons1:after {
+  border-radius: 10vh;
+}

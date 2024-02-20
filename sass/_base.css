@@ -24,8 +24,7 @@ displayGameInfo body {
   align-items: center;
   justify-content: center;
 }
-
-.button-leaderboard {
+scoreTitle .button-leaderboard {
   position: absolute;
   bottom: 290px;
   align-items: center;
@@ -965,7 +964,7 @@ buttonSubmit .verbButton:hover,
   font-size: 60px;
   font-weight: 800;
   justify-content: center;
-  line-height: 24px;
+  /* line-height: 70px */
   margin: 0;
   min-height: 64px;
   outline: none;
@@ -993,7 +992,7 @@ buttonSubmit .verbButton:hover,
 
 .optionButtons:before,
 .optionButtons:after {
-  border-radius: 80px;
+  border-radius: 120px;
 }
 
 .optionButtons:before {
@@ -1571,29 +1570,30 @@ buttonSubmit .verbButton:hover,
 
 .earlySubmit {
   position: absolute;
-  width: 200px; /* Adjust width as needed */
-  height: 75px; /* Adjust height as needed */
-  top: 30px;
-  left: 15px;
+  width: 20vw; /* Adjust width as needed */
+  height: 7vh; /* Adjust height as needed */
+  top: 3vh; /* Adjust top position as needed */
+  left: 2vw; /* Adjust left position as needed */
   appearance: button;
   backface-visibility: hidden;
   background-color: #405cf5;
-  border-radius: 6px;
+  border-radius: 3vw; /* Adjust border radius proportionally */
   border-width: 0;
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
+    /* Adjust box shadow units */ rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0,
+    rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     Ubuntu, sans-serif;
-  font-size: 100%;
-  height: 44px;
+  font-size: 4vw; /* Adjust font size proportionally */
+  height: 7vh;
   line-height: 1.15;
-  margin: 12px 0 0;
+  margin: 1.5vh 0 0; /* Adjust margin units */
   outline: none;
   overflow: hidden;
-  padding: 0 25px;
+  padding: 0 3vw; /* Adjust padding units */
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
@@ -1608,7 +1608,7 @@ buttonSubmit .verbButton:hover,
 }
 
 .earlySubmit:focus {
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
-    rgba(50, 151, 211, 0.3) 0 0 0 4px;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
+    rgba(50, 50, 93, 0.2) 0 0.5vh 1.5vh 0, rgba(0, 0, 0, 0.1) 0 0.2vh 0.2vh 0,
+    rgba(50, 151, 211, 0.3) 0 0 0 1vw; /* Adjust box shadow units */
 }

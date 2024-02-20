@@ -46,14 +46,15 @@
     </div>
 
     <div class="displaySubstantive"></div>
-    <div class="displayScore1 display1">
-      <div class="timer"></div>
-      SCORE:0
-    </div>
+    <div class="displayScore1 display1">SCORE:0</div>
     <form class="display1" id="leaderboardForm">
       <p class="leaderboardTitle">Submit your score to the leaderboard!</p>
-      <label class="labelPlayer" for="playerName">Enter your name:</label>
-      <input type="text" class="playerName" name="playerName" required />
+
+      <li class="leaderboardSubmition">
+        <label class="labelPlayer" for="playerName">Enter your name:</label>
+        <input type="text" class="playerName" name="playerName" required />
+      </li>
+
       <!-- You might also have an input for the score -->
       <!-- Replace "score" with whatever variable holds the player's score -->
 
@@ -118,6 +119,7 @@
       <p class="selectTensesDescription">Customize your tense practice!</p>
       <button class="startGame2Button">Start</button>
     </form>
+
     <div class="verbsView display1">
       <p class="displayVerb"></p>
       <p class="displayTense"></p>
@@ -155,37 +157,41 @@
     </div>
     <div class="guessWordsView">
       <div class="buttonOption">
-        <button
-          id="buttonOption1"
-          class="option1Button optionButtons display1"
-        ></button>
-        <button
-          id="buttonOption2"
-          class="option2Button optionButtons display1"
-        ></button>
-        <button
-          id="buttonOption3"
-          class="option3Button optionButtons display1"
-        ></button>
+        <div class="button-container">
+          <button
+            id="buttonOption1"
+            class="option1Button optionButtons display1"
+          ></button>
+          <button
+            id="buttonOption2"
+            class="option2Button optionButtons display1"
+          ></button>
+          <button
+            id="buttonOption3"
+            class="option3Button optionButtons display1"
+          ></button>
+        </div>
       </div>
     </div>
 
     <div class="guessWordsView1">
       <div class="buttonOption1">
-        <button
-          id="buttonOption4"
-          class="option4Button optionButtons1 display1"
-        ></button>
-        <button
-          id="buttonOption5"
-          class="option5Button optionButtons1 display1"
-        ></button>
-        <button
-          id="buttonOption6"
-          class="option6Button optionButtons1 display1"
-        ></button>
+        <div class="button-container1">
+          <button
+            id="buttonOption4"
+            class="option4Button optionButtons1 display1"
+          ></button>
+          <button
+            id="buttonOption5"
+            class="option5Button optionButtons1 display1"
+          ></button>
+          <button
+            id="buttonOption6"
+            class="option6Button optionButtons1 display1"
+          ></button>
+        </div>
       </div>
-      <p class="displayWord display1">test</p>
+      <p class="displayWord display1"></p>
     </div>
 
     <div class="leaderboard display1">
@@ -238,5 +244,6 @@
     <button class="backButton display1" role="button">BACK</button>
     <div class="timer"></div>
     <button class="earlySubmit display1" role="button">Submit Earlier!</button>
+    <div class="timer"></div>
   </body>
 </html>
