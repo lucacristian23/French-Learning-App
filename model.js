@@ -116,6 +116,9 @@ export const startGame1 = function () {
   container.innerHTML = "";
   currentGame = nameGame1;
   let timeout1 = setTimeout(displayLeaderboardForm, timerGame1);
+
+  score = 0;
+  scoreContainer.innerHTML = `SCORE:${score}`;
   timeout1Scope = timeout1;
   displayRandomSubstantive();
   startTimer(timerGame1 / 1000, true);
@@ -697,4 +700,5 @@ export const earlySubmit = function () {
 
   if (currentGame === nameGame4) displayLeaderboardForm4();
 };
-startGame2Button;
+startGame1;
+score;
