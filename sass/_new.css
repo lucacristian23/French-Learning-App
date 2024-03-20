@@ -377,6 +377,12 @@ body {
   }
 }
 
+@media (min-width: 769px) and (max-width: 992px) {
+  .backButton {
+    font-size: 1.4vh; /* Adjust the font size as needed */
+  }
+}
+
 .btnGender {
   line-height: 8vh;
   vertical-align: middle;
@@ -567,7 +573,7 @@ body {
   height: 7.5vh; /* Adjust height as needed */
   pointer-events: none;
   bottom: 4vh;
-  right: 13%; /* Adjust the value to move it more to the right */
+  right: 17%; /* Adjust the value to move it more to the right */
   color: rgb(48, 10, 10);
   font-size: 4.5vh;
   /*border: 2px solid red;  Add border with red color 
@@ -617,7 +623,6 @@ body {
     font-size: 5vh;
   }
 }
-
 .earlySubmit {
   position: absolute;
   width: 12vw; /* Adjust width as needed */
@@ -875,6 +880,15 @@ li {
     left: 1vh;
     bottom: 10vh;
     transform: scale(0.5); /* Adjust the scale factor as needed */
+  }
+}
+
+@media (min-width: 2559px) {
+  .skipButton {
+    left: 15vh;
+    bottom: 10vh;
+    transform: scale(1); /* Adjust the scale factor as needed */
+    font-size: 3vh;
   }
 }
 
@@ -1393,14 +1407,6 @@ li {
   }
 }
 
-.displayWord {
-  position: absolute;
-  left: 50%;
-  top: 1vh;
-  transform: translate(-50%, -50%);
-  font-size: 18vh;
-}
-
 @media (min-width: 768px) {
   .optionButtons1 {
     padding: 2.4vh 4vh;
@@ -1413,13 +1419,37 @@ li {
 }
 
 .checkBoxes {
-  transform: scale(1.5);
+  position: absolute;
+  gap: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  width: 70%;
-  border: 2px solid black;
+  left: 50%;
+  transform: translateX(-50%);
+  /*border: 2px solid black; */
+  width: 80%;
+  justify-content: center; /* Horizontally center the items */
+  align-items: center; /* Vertically center the items */
+  bottom: 49vh;
 }
+
+@media (max-width: 576px) {
+  .checkBoxes {
+    position: absolute;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    justify-content: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
+    bottom: 49vh;
+  }
+}
+
 .checkbox-wrapper-42 input[type="checkbox"] {
   display: none;
   visibility: hidden;
@@ -1432,42 +1462,48 @@ li {
 .checkbox-wrapper-42 .cbx {
   position: relative;
   top: 1px;
-  width: 17px;
-  height: 17px;
-  border: 1px solid #c8ccd4;
-  border-radius: 3px;
+  width: 1.6em; /* Changed to em units for relative sizing */
+  height: 1.6em; /* Changed to em units for relative sizing */
+  border: 0.15em solid #c8ccd4; /* Changed to em units for relative sizing */
+  border-radius: 0.3em; /* Changed to em units for relative sizing */
   vertical-align: middle;
   transition: background 0.1s ease;
   cursor: pointer;
 }
+
 .checkbox-wrapper-42 .cbx:after {
   content: "";
   position: absolute;
-  top: 1px;
-  left: 5px;
-  width: 5px;
-  height: 11px;
+  top: 0.1em; /* Changed to em units for relative sizing */
+  left: 0.5em; /* Changed to em units for relative sizing */
+  width: 0.5em; /* Changed to em units for relative sizing */
+  height: 1.1em; /* Changed to em units for relative sizing */
   opacity: 0;
   transform: rotate(45deg) scale(0);
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-right: 0.2em solid #fff; /* Changed to em units for relative sizing */
+  border-bottom: 0.2em solid #fff; /* Changed to em units for relative sizing */
   transition: all 0.3s ease;
   transition-delay: 0.15s;
 }
+
 .checkbox-wrapper-42 .lbl {
-  margin-left: 5px;
+  margin-left: 0.5em; /* Changed to em units for relative sizing */
   vertical-align: middle;
   cursor: pointer;
+  font-size: 1.5em;
 }
+
 .checkbox-wrapper-42 input[type="checkbox"]:checked ~ .cbx {
   border-color: transparent;
   background: #6871f1;
   animation: jelly-42 0.6s ease;
 }
+
 .checkbox-wrapper-42 input[type="checkbox"]:checked ~ .cbx:after {
   opacity: 1;
   transform: rotate(45deg) scale(1);
 }
+
 .checkbox-wrapper-42 .cntr {
   position: absolute;
   top: 50%;
@@ -1475,75 +1511,7 @@ li {
   width: 100%;
   text-align: center;
 }
-@-moz-keyframes jelly-42 {
-  from {
-    transform: scale(1, 1);
-  }
-  30% {
-    transform: scale(1.25, 0.75);
-  }
-  40% {
-    transform: scale(0.75, 1.25);
-  }
-  50% {
-    transform: scale(1.15, 0.85);
-  }
-  65% {
-    transform: scale(0.95, 1.05);
-  }
-  75% {
-    transform: scale(1.05, 0.95);
-  }
-  to {
-    transform: scale(1, 1);
-  }
-}
-@-webkit-keyframes jelly-42 {
-  from {
-    transform: scale(1, 1);
-  }
-  30% {
-    transform: scale(1.25, 0.75);
-  }
-  40% {
-    transform: scale(0.75, 1.25);
-  }
-  50% {
-    transform: scale(1.15, 0.85);
-  }
-  65% {
-    transform: scale(0.95, 1.05);
-  }
-  75% {
-    transform: scale(1.05, 0.95);
-  }
-  to {
-    transform: scale(1, 1);
-  }
-}
-@-o-keyframes jelly-42 {
-  from {
-    transform: scale(1, 1);
-  }
-  30% {
-    transform: scale(1.25, 0.75);
-  }
-  40% {
-    transform: scale(0.75, 1.25);
-  }
-  50% {
-    transform: scale(1.15, 0.85);
-  }
-  65% {
-    transform: scale(0.95, 1.05);
-  }
-  75% {
-    transform: scale(1.05, 0.95);
-  }
-  to {
-    transform: scale(1, 1);
-  }
-}
+
 @keyframes jelly-42 {
   from {
     transform: scale(1, 1);
@@ -1569,27 +1537,81 @@ li {
 }
 .selectTensesTitle {
   position: absolute;
-  top: 6vh;
+  top: 8vh;
   left: 50%;
+  width: 60%;
   transform: translateX(-50%);
   font-weight: bold;
-  font-size: 5.5vh;
-  border: 2px solid black;
+  font-size: 8vh;
 }
+
+@media (max-width: 576px) {
+  .selectTensesTitle {
+    position: absolute;
+    width: 75%;
+    top: 4vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 2.8vh;
+    /*border: 2px solid black;*/
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .selectTensesTitle {
+    position: absolute;
+    width: 70%;
+    top: 4vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 4.4vh;
+    /*border: 2px solid black;*/
+  }
+}
+
 .selectTensesDescription {
   position: absolute;
-  font-size: 3.2vh;
+  font-size: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  top: 19vh;
+  top: 27vh;
 }
+
+@media (max-width: 576px) {
+  .selectTensesDescription {
+    position: absolute;
+    font-size: 2.5vh;
+    width: 77.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8.4vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .selectTensesDescription {
+    position: absolute;
+    font-size: 3.8vh;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15vh;
+    /* border: 2px solid black; */
+  }
+}
+
 .startGame2Button {
   position: absolute;
-  transform: scale(2);
-  width: 22vh;
-  font-size: 3.2vh;
-  top: 39vh;
-  left: 50%;
+  transform: scale(2.7);
+  height: 7.2vh;
+  width: 31.2vh;
+  font-size: 5vh;
+  top: 61vh;
+  left: 40%;
   transform: translateX(-50%);
   --c: #fff;
   /* text color */
@@ -1621,39 +1643,248 @@ li {
 
 .startGame2Button {
   font-weight: bold;
-  font-size: 2rem;
   margin: 0;
   cursor: pointer;
   padding: 0.1em 0.3em;
 }
+
+@media (max-width: 576px) {
+  .startGame2Button {
+    transform: scale(2.7);
+    height: 7.2vh;
+    width: 31.2vh;
+    font-size: 5vh;
+    top: 61vh;
+    left: 48%;
+    transform: translateX(-50%);
+    /* border: 2px solid black; */
+  }
+}
+
+@media (max-width: 576px) {
+  .errorTense {
+    position: absolute;
+    width: 40vh;
+    top: 60vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2vh;
+  }
+}
+
+@media (max-width: 390px) {
+  .errorTense {
+    position: absolute;
+    width: 40vh;
+    top: 62vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .errorTense {
+    position: absolute;
+    width: 60vh;
+    top: 30vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .errorTense {
+    position: absolute;
+    width: 60vh;
+    top: 30vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vh;
+  }
+}
+
+/* A1*/
+@media (max-width: 389px) {
+  .checkBoxes {
+    position: absolute;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    justify-content: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
+    bottom: 36vh;
+  }
+
+  .selectTensesTitle {
+    position: absolute;
+    width: 80%;
+    top: 4vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 3vh;
+    /*border: 2px solid black;*/
+  }
+
+  .startGame2Button {
+    transform: scale(2.7);
+    height: 7.2vh;
+    width: 31.2vh;
+    font-size: 5vh;
+    top: 75vh;
+    left: 48%;
+    transform: translateX(-50%);
+    /* border: 2px solid black; */
+  }
+
+  .selectTensesDescription {
+    position: absolute;
+    font-size: 2.4vh;
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10vh;
+    /* border: 2px solid black; */
+  }
+
+  .errorTense {
+    position: absolute;
+    width: 40vh;
+    bottom: -27vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2vh;
+  }
+}
+
+.errorTense {
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vh;
+}
+
+.buttonSpecialContainer {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7.5vh; /* Adjust the gap between buttons as needed */
+  border: 2px solid black;
+  height: 6vh;
+  width: 155vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 80vh;
+}
+
+@media screen and (width: 360px) and (height: 640px) {
+  .checkBoxes {
+    position: absolute;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60%;
+    justify-content: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
+    bottom: 36vh;
+  }
+
+  .selectTensesTitle {
+    position: absolute;
+    width: 65%;
+    top: 4vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 3vh;
+  }
+
+  .startGame2Button {
+    transform: scale(2.7);
+    height: 7.2vh;
+    width: 31.2vh;
+    font-size: 5vh;
+    top: 75vh;
+    left: 48%;
+    transform: translateX(-50%);
+    /* border: 2px solid black; */
+  }
+
+  .selectTensesDescription {
+    position: absolute;
+    font-size: 3.2vh;
+    width: 81%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 7.8vh;
+  }
+
+  .errorTense {
+    position: absolute;
+    width: 45vh;
+    bottom: -27vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .startGame2Button {
+    transform: scale(2.7);
+    height: 7.2vh;
+    width: 31.2vh;
+    font-size: 5vh;
+    top: 61vh;
+    left: 48%;
+    transform: translateX(-50%);
+    /* border: 2px solid black; */
+  }
+}
+
 .displayVerb {
   position: absolute;
   left: 50%;
   top: -30px;
   transform: translate(-50%, -50%);
-  font-size: 200px;
+  font-size: 22vh;
 }
 .displayTense {
   position: absolute;
   left: 50%;
   top: 200px;
   transform: translate(-50%, -50%);
-  font-size: 150px;
+  font-size: 16.5vh;
 }
 .inputVerbForm {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 200px;
+  bottom: 32vh;
 }
 
 .inputPerson {
   position: fixed; /* Change to fixed position */
   left: -30%; /* Adjust the left position as needed */
-  font-size: 55px;
-  width: 300px; /* Adjust the width as needed */
-  height: 500px; /* Adjust the height as needed */
-  bottom: -435px;
+  font-size: 5.5vh;
+  width: 30vh;
+  height: 50vh;
+  top: -1vh;
 }
 
 .verbButton {
@@ -1704,7 +1935,7 @@ buttonSubmit .verbButton:hover,
 }
 .buttonSpecial {
   transform: scale(0.9);
-  bottom: -90px;
+  width: 4vh;
   align-items: center;
   background-color: #461b79;
   background-position: 0 0;
@@ -1714,7 +1945,7 @@ buttonSubmit .verbButton:hover,
   color: #0e0e0e;
   cursor: pointer;
   display: flex;
-  font-size: 1rem;
+  font-size: 2.4vh;
   font-weight: 700;
   line-height: 33.4929px;
   list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg)
@@ -1756,6 +1987,8 @@ buttonSubmit .verbButton:hover,
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
   color: #000000;
 }
+
+/*
 .buttonÀ {
   position: fixed;
   right: 1185px;
@@ -1885,19 +2118,192 @@ buttonSubmit .verbButton:hover,
   align-items: center;
   display: flex;
 }
+*/
 .displayPreviousAnswer {
   position: absolute;
   left: 13%;
-  top: 100px;
+  top: 10vh; /* Converted from 100px */
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 6vh; /* Adjusted for consistency */
 }
+
 .displayPreviousCorrectAnswer {
   position: absolute;
   left: 87%;
-  top: 100px;
+  top: 10vh; /* Converted from 100px */
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 6vh; /* Adjusted for consistency */
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .displayPreviousAnswer {
+    position: absolute;
+    left: 13%;
+    top: 10vh; /* Converted from 100px */
+    transform: translate(-50%, -50%);
+    font-size: 6vh; /* Adjusted for consistency */
+  }
+
+  .displayPreviousCorrectAnswer {
+    position: absolute;
+    left: 87%;
+    top: 10vh; /* Converted from 100px */
+    transform: translate(-50%, -50%);
+    font-size: 6vh; /* Adjusted for consistency */
+  }
+
+  .displayVerb {
+    position: absolute;
+    left: 50%;
+    top: 3vh;
+    transform: translate(-50%, -50%);
+    font-size: 12vh;
+  }
+  .displayTense {
+    position: absolute;
+    left: 50%;
+    top: 18vh;
+    transform: translate(-50%, -50%);
+    font-size: 8vh;
+  }
+  .inputVerbForm {
+    position: fixed;
+    left: 50%; /* (65% / 100) * 100 = 32.5vh */
+    width: 65%; /* (70% / 100) * 100 = 35vh */
+    transform: translateX(-50%);
+    border: 0.1vh solid black; /* 1px = 0.1vh */
+    bottom: 27vh; /* 500px / 1000px * 100 = 50vh */
+  }
+
+  .inputPerson {
+    position: fixed;
+    left: -11%; /* (-22% / 100) * 100 = -11vh */
+    font-size: 5vh;
+    width: 30vh; /* 300px / 1000px * 100 = 30vh */
+    height: 50vh; /* 500px / 1000px * 100 = 50vh */
+    bottom: -43.5vh; /* -435px / 1000px * 100 = -43.5vh */
+  }
+
+  .verbButton {
+    top: 6vh;
+    transform: scale(1);
+    font-size: 3vh; /* 50px / 1000px * 100 = 5vh */
+    left: 30%; /* 60% / 100 * 100 = 30vh */
+    width: 20vh; /* 150px / 1000px * 100 = 15vh */
+    height: 5vh; /* 50px / 1000px * 100 = 5vh */
+    background: #461b79;
+    border: 0.1vh solid #030303; /* 1px = 0.1vh */
+    border-radius: 0.6vh; /* 6px / 1000px * 100 = 0.6vh */
+    box-shadow: rgba(0, 0, 0, 0.1) 0.1vh 0.2vh 0.4vh;
+  }
+
+  #userAnswer {
+    font-size: 3vh; /* 30px / 1000px * 100 = 3vh */
+    width: 25vh; /* 250px / 1000px * 100 = 25vh */
+    height: 4vh; /* 40px / 1000px * 100 = 4vh */
+  }
+
+  .buttonSpecialContainer {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4vh; /* Adjust the gap between buttons as needed */
+    border: 2px solid black;
+    height: 14vh;
+    width: 70vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 45vh;
+  }
+
+  .buttonSpecial {
+    margin-right: 15px; /* Set horizontal margin */
+    margin-bottom: 15px; /* Set vertical margin */
+
+    transform: scale(0.9);
+    bottom: -90px;
+    align-items: center;
+    background-color: #461b79;
+    background-position: 0 0;
+    border: 1px solid #601ab1;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: #0e0e0e;
+    cursor: pointer;
+    display: flex;
+    font-size: 2vh;
+    font-weight: 700;
+    line-height: 33.4929px;
+    list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg)
+      none;
+    padding: 2px 12px;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: none;
+    text-underline-offset: 1px;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    word-break: break-word;
+  }
+
+  .buttonSpecial:active,
+  .buttonSpecial:hover,
+  .buttonSpecial:focus {
+    outline: 0;
+  }
+
+  .buttonSpecial:active {
+    background-color: #4523da;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+    color: #080101;
+  }
+
+  .buttonSpecial:hover {
+    background-color: #260a52;
+    border-color: #2f0daa;
+  }
+
+  .buttonSpecial:active:hover,
+  .buttonSpecial:focus:hover,
+  .button-45:focus {
+    background-color: #d33a2c;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+    color: #000000;
+  }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+  .buttonSpecial {
+    font-size: 3vh;
+  }
+
+  .displayTense {
+    position: absolute;
+    left: 50%;
+    top: 22vh;
+    transform: translate(-50%, -50%);
+    font-size: 16.5vh;
+  }
+
+  .inputVerbForm {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 32vh;
+  }
+
+  .inputPerson {
+    position: fixed; /* Change to fixed position */
+    left: -42%; /* Adjust the left position as needed */
+    font-size: 5.5vh;
+    width: 30vh;
+    height: 50vh;
+    top: -1vh;
+  }
 }
 
 .display1 {

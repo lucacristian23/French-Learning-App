@@ -1,9 +1,8 @@
 export const leaderboard1 = [];
 export const timerGame1 = 6000000;
-export const timerGame2 = 180000;
+export const timerGame2 = 6000000;
 export const timerGame3 = 6000000;
 export const timerGame4 = 6000000;
-console.log("testconfig");
 export const nameGame1 = "Substantive Gender Sprint";
 export const nameGame2 = "Type in the correct form of the verb";
 export const nameGame3 = "Word Translation Challenge";

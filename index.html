@@ -63,72 +63,74 @@
       <p class="scoreTitle"></p>
     </form>
 
-    <form id="tenseSelectionForm" class="display1">
-      <p class="errorTense display1">
-        Select at least one tense before starting!
-      </p>
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-present" type="checkbox" name="present" />
-        <label class="cbx" for="cbx-present"></label>
-        <label class="lbl" for="cbx-present">Present</label>
-      </div>
+    <div id="tenseSelection" class="display1">
+      <form id="tenseSelectionForm">
+        <p class="errorTense display1">
+          Select at least one tense before starting!
+        </p>
+        <div class="checkbox-wrapper-42">
+          <input id="cbx-present" type="checkbox" name="present" />
+          <label class="cbx" for="cbx-present"></label>
+          <label class="lbl" for="cbx-present">Present</label>
+        </div>
 
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-presentPerfect" type="checkbox" name="presentPerfect" />
-        <label class="cbx" for="cbx-presentPerfect"></label>
-        <label class="lbl" for="cbx-presentPerfect">Present Perfect</label>
-      </div>
+        <div class="checkbox-wrapper-42">
+          <input
+            id="cbx-presentPerfect"
+            type="checkbox"
+            name="presentPerfect"
+          />
+          <label class="cbx" for="cbx-presentPerfect"></label>
+          <label class="lbl" for="cbx-presentPerfect">Present Perfect</label>
+        </div>
 
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-imperfect" type="checkbox" name="imperfect" />
-        <label class="cbx" for="cbx-imperfect"></label>
-        <label class="lbl" for="cbx-imperfect">Imperfect</label>
-      </div>
+        <div class="checkbox-wrapper-42">
+          <input id="cbx-imperfect" type="checkbox" name="imperfect" />
+          <label class="cbx" for="cbx-imperfect"></label>
+          <label class="lbl" for="cbx-imperfect">Imperfect</label>
+        </div>
 
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-plusPerfect" type="checkbox" name="plusPerfect" />
-        <label class="cbx" for="cbx-plusPerfect"></label>
-        <label class="lbl" for="cbx-plusPerfect">Plus Perfect</label>
-      </div>
+        <div class="checkbox-wrapper-42">
+          <input id="cbx-plusPerfect" type="checkbox" name="plusPerfect" />
+          <label class="cbx" for="cbx-plusPerfect"></label>
+          <label class="lbl" for="cbx-plusPerfect">Plus Perfect</label>
+        </div>
 
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-future" type="checkbox" name="future" />
-        <label class="cbx" for="cbx-future"></label>
-        <label class="lbl" for="cbx-future">Future</label>
-      </div>
+        <div class="checkbox-wrapper-42">
+          <input id="cbx-future" type="checkbox" name="future" />
+          <label class="cbx" for="cbx-future"></label>
+          <label class="lbl" for="cbx-future">Future</label>
+        </div>
 
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-futurePerfect" type="checkbox" name="futurePerfect" />
-        <label class="cbx" for="cbx-futurePerfect"></label>
-        <label class="lbl" for="cbx-futurePerfect">Future Perfect</label>
-      </div>
+        <div class="checkbox-wrapper-42">
+          <input id="cbx-futurePerfect" type="checkbox" name="futurePerfect" />
+          <label class="cbx" for="cbx-futurePerfect"></label>
+          <label class="lbl" for="cbx-futurePerfect">Future Perfect</label>
+        </div>
 
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-simplePast" type="checkbox" name="simplePast" />
-        <label class="cbx" for="cbx-simplePast"></label>
-        <label class="lbl" for="cbx-simplePast">Simple Past</label>
-      </div>
+        <div class="checkbox-wrapper-42">
+          <input id="cbx-simplePast" type="checkbox" name="simplePast" />
+          <label class="cbx" for="cbx-simplePast"></label>
+          <label class="lbl" for="cbx-simplePast">Simple Past</label>
+        </div>
 
-      <div class="checkbox-wrapper-42">
-        <input id="cbx-pastPerfect" type="checkbox" name="pastPerfect" />
-        <label class="cbx" for="cbx-pastPerfect"></label>
-        <label class="lbl" for="cbx-pastPerfect">Past Perfect</label>
-      </div>
-
+        <div class="checkbox-wrapper-42">
+          <input id="cbx-pastPerfect" type="checkbox" name="pastPerfect" />
+          <label class="cbx" for="cbx-pastPerfect"></label>
+          <label class="lbl" for="cbx-pastPerfect">Past Perfect</label>
+        </div>
+      </form>
       <p class="selectTensesTitle">Tense Mastery Selection:</p>
       <p class="selectTensesDescription">Customize your tense practice!</p>
       <button class="startGame2Button">Start</button>
-    </form>
+    </div>
 
     <div class="verbsView display1">
       <p class="displayVerb"></p>
       <p class="displayTense"></p>
       <p class="displayPerson"></p>
 
-      <form class="inputVerbForm">
-        <label class="inputPerson" for="userAnswer"></label>
-        <input type="text" id="userAnswer" name="userAnswer" required />
-        <button class="verbButton" type="submit">Submit</button>
+      <div class="buttonSpecialContainer">
         <button
           class="buttonÀ buttonSpecial"
           onclick="insertLetter('à')"
@@ -136,7 +138,7 @@
         >
           à
         </button>
-        <button class="buttonÂ buttonSpecial" type="button">â</button>
+
         <button class="buttonÄ buttonSpecial" type="button">ä</button>
         <button class="buttonÉ buttonSpecial" type="button">é</button>
         <button class="buttonÈ buttonSpecial" type="button">è</button>
@@ -150,6 +152,12 @@
         <button class="buttonÛ buttonSpecial" type="button">û</button>
         <button class="buttonÜ buttonSpecial" type="button">ü</button>
         <button class="buttonÇ buttonSpecial" type="button">ç</button>
+      </div>
+
+      <form class="inputVerbForm">
+        <label class="inputPerson" for="userAnswer"></label>
+        <input type="text" id="userAnswer" name="userAnswer" required />
+        <button class="verbButton" type="submit">Submit</button>
       </form>
 
       <p class="displayPreviousAnswer"></p>

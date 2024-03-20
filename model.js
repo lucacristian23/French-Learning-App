@@ -28,7 +28,15 @@ const substantiveContainer = document.querySelector(".displaySubstantive");
 const scoreContainer = document.querySelector(".displayScore1");
 const leaderboardForm = document.getElementById("leaderboardForm");
 const scoreTitle = document.querySelector(".scoreTitle");
+
+const verbTenseSelection = document.getElementById("tenseSelection");
 const checkBoxes = document.getElementById("tenseSelectionForm");
+
+const selectTensesTitle = document.querySelector(`.selectTensesTitle`);
+const selectTensesDescription = document.querySelector(
+  `.selectTensesDescription`
+);
+const startGame2Button = document.querySelector(`.startGame2Button`);
 const verbView = document.querySelector(`.verbsView`);
 const displayVerb = document.querySelector(`.displayVerb`);
 const displayTense = document.querySelector(`.displayTense`);
@@ -77,21 +85,18 @@ export const removeGame1 = function () {
   container.innerHTML = "";
 };
 export const displayGame2 = function () {
-  console.log(container);
   container.innerHTML = `Dive into rapid-fire French verb conjugation with '${nameGame2}'! Confronted with random verbs, tenses, and persons, your challenge is to swiftly type the accurate conjugated form within a dynamic three-minute window. Enhance your verb mastery, typing speed, and accuracy as you race against time. Ready to conquer French grammar? Get typing, you only have 3 minutes!`;
 };
 export const removeGame2 = function () {
   container.innerHTML = "";
 };
 export const displayGame3 = function () {
-  console.log(container);
   container.innerHTML = `Embark on a thrilling two-minute linguistic journey with the '${nameGame3}'! As English words flash on the screen, you're presented with three French options. However, only one holds the correct translation! Quick thinking is essential as you race against time to click on the accurate French translation. Will you conquer this translation challenge within the time limit and enhance your bilingual prowess?`;
 };
 export const removeGame3 = function () {
   container.innerHTML = "";
 };
 export const displayGame4 = function () {
-  console.log(container);
   container.innerHTML = `Immerse yourself in the '${nameGame4}' mini-game! As a French word takes center stage, you face three English contenders. Your task? Identify the correct English translation among the options. But here's the twist : once chosen, brace yourself for another round with a new French word and fresh English choices! With only two minutes on the clock, test your linguistic skills and adaptability in this dynamic, fast-paced language challenge. Can you navigate the linguistic maze and emerge victorious? Get ready for a thrilling ride through translation mastery!`;
 };
 export const removeGame4 = function () {
@@ -270,15 +275,42 @@ function getRandomPerson(tenseObject) {
 
 // Example usage
 
+function displayCSSProperties(element) {
+  // Check if element exists
+  if (!element) {
+    console.error("Element is null or undefined.");
+    return;
+  }
+
+  // Get the computed styles of the selected element
+  var computedStyles = window.getComputedStyle(element);
+
+  // Create an object to store CSS properties
+  var cssProperties = {};
+
+  // Store CSS properties in the object
+  for (var i = 0; i < computedStyles.length; i++) {
+    var propertyName = computedStyles[i];
+    var propertyValue = computedStyles.getPropertyValue(propertyName);
+    cssProperties[propertyName] = propertyValue;
+  }
+
+  // Return the object containing CSS properties
+  console.log(cssProperties);
+}
+
 export const displayCheckBoxesGame2 = function () {
   score = 0;
-  button1.classList.toggle("display1");
-  button2.classList.toggle("display1");
-  button3.classList.toggle("display1");
-  button4.classList.toggle("display1");
+  button1.classList.add("display1");
+  button2.classList.add("display1");
+  button3.classList.add("display1");
+  button4.classList.add("display1");
   container.innerHTML = "";
-  checkBoxes.classList.toggle("display1");
-  checkBoxes.classList.toggle("checkBoxes");
+  verbTenseSelection.classList.remove("display1");
+  checkBoxes.classList.add("checkBoxes");
+  displayCSSProperties(selectTensesTitle);
+  displayCSSProperties(selectTensesDescription);
+  displayCSSProperties(checkBoxes);
 };
 let selectedTenses;
 let randomVerb;
@@ -310,8 +342,9 @@ export const startAndProcesateGame2 = function () {
   randomVerb = getRandomVerb();
   randomTense = getRandomTense(randomVerb);
   randomPerson = getRandomPerson(randomVerb[randomTense]);
-  checkBoxes.classList.toggle("display1");
-  checkBoxes.classList.toggle("checkBoxes");
+
+  checkBoxes.classList.remove("checkBoxes");
+  verbTenseSelection.classList.toggle("display1");
   //console.log(`Infinitive: ${randomVerb.infinitive}`);
   //console.log(`Tense: ${randomTense}`);
   //console.log(`Person: ${randomPerson}`);
@@ -598,11 +631,15 @@ export const returnAtStart = function () {
   franceFlag.classList.remove("display1");
   startButton.classList.remove("display1");
   leaderboardButton.classList.remove("display1");
+
   backButton.classList.add("display1");
   leaderboard.classList.add("display1");
-  checkBoxes.classList.add("display1");
+  verbTenseSelection.classList.add("display1");
+
   submitEarly.classList.add("display1");
   checkBoxes.classList.remove("checkBoxes");
+
+  displayCSSProperties(checkBoxes);
 };
 
 let timerInterval; // Declare timerInterval outside the function to access it later
@@ -660,3 +697,4 @@ export const earlySubmit = function () {
 
   if (currentGame === nameGame4) displayLeaderboardForm4();
 };
+startGame2Button;
