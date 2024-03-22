@@ -38,15 +38,10 @@ const init = function () {
 init();
 
 function startGame() {
-  // Retrieve selected tenses using JavaScript
   const form = document.getElementById("tenseSelectionForm");
   const selectedTenses = Array.from(
     form.querySelectorAll('input[type="checkbox"]:checked')
   ).map((checkbox) => checkbox.name);
-
-  // Use selectedTenses for game logic or other actions
-  console.log("Selected Tenses:", selectedTenses);
-  // Add your game logic here
 }
 
 function insertLetter(letter) {

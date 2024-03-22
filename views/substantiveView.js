@@ -17,7 +17,6 @@ class substantiveView {
   checkGuess(handler) {
     const self = this;
     this._genderButtons.forEach((button) => {
-      // Add a click event listener to each button
       button.addEventListener("click", function (e) {
         self.clickedElement = e.target;
         e.preventDefault();

@@ -129,17 +129,17 @@ scoreTitle .button-leaderboard {
   transform: translateY(2px);
 }
 .container {
-  text-align: center; /* Aliniaza continutul pe centru */
-  position: relative; /* Face containerul un element de referință pentru poziționarea absolută */
-  border: 2px solid black; /* Adding border for visualization */
+  text-align: center;
+  position: relative;
+  border: 2px solid black;
   display: block;
 }
 .image-above {
   display: block;
-  position: absolute; /* Poziționează imaginea absolut în interiorul containerului */
-  top: 150; /* Plasează imaginea la partea de sus a containerului */
-  left: 50%; /* Mută imaginea pe orizontală la jumătatea containerului */
-  transform: translateX(-50%); /* Centrează imaginea pe orizontală */
+  position: absolute;
+  top: 150;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .dice-button {
   align-items: center;
@@ -348,8 +348,8 @@ scoreTitle .button-leaderboard {
 }
 
 .displayGameInfo {
-  width: 1300px; /* Adjust width as needed */
-  height: 500px; /* Adjust height as needed */
+  width: 1300px;
+  height: 500px;
   position: absolute;
   pointer-events: none;
   color: rgb(48, 10, 10);
@@ -357,8 +357,8 @@ scoreTitle .button-leaderboard {
   font-family: "Didot", serif;
 }
 .displaySubstantive {
-  width: 450px; /* Adjust width as needed */
-  height: 200px; /* Adjust height as needed */
+  width: 450px;
+  height: 200px;
   position: absolute;
   pointer-events: none;
   color: rgb(48, 10, 10);
@@ -371,8 +371,8 @@ scoreTitle .button-leaderboard {
 }
 .displayScore1 {
   position: absolute;
-  width: 300px; /* Adjust width as needed */
-  height: 75px; /* Adjust height as needed */
+  width: 300px;
+  height: 75px;
   pointer-events: none;
   bottom: 40px;
   right: 30px;
@@ -637,14 +637,12 @@ scoreTitle .button-leaderboard {
   width: 200px;
   font-size: 30px;
   top: 60px;
-  left: 37%; /* Center horizontally at 50% */
-  transform: translateX(-50%); /* Move back by half of the button's width */
+  left: 37%;
+  transform: translateX(-50%);
   --c: #fff;
-  /* text color */
   background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%)
       var(--_p, 100%) / 300% no-repeat,
     #004dff;
-  /* background color */
   color: #0000;
   border: none;
   transform: perspective(500px) rotateY(calc(20deg * var(--_i, -1)));
@@ -696,11 +694,11 @@ scoreTitle .button-leaderboard {
 }
 
 .inputPerson {
-  position: fixed; /* Change to fixed position */
-  left: -30%; /* Adjust the left position as needed */
+  position: fixed;
+  left: -30%;
   font-size: 55px;
-  width: 300px; /* Adjust the width as needed */
-  height: 500px; /* Adjust the height as needed */
+  width: 300px;
+  height: 500px;
   bottom: -435px;
 }
 
@@ -746,9 +744,9 @@ buttonSubmit .verbButton:hover,
 }
 
 #userAnswer {
-  font-size: 30px; /* Adjust the font size as needed */
-  width: 250px; /* Adjust the width as needed */
-  height: 40px; /* Adjust the height as needed */
+  font-size: 30px;
+  width: 250px;
+  height: 40px;
 }
 .buttonSpecial {
   transform: scale(0.9);
@@ -964,7 +962,6 @@ buttonSubmit .verbButton:hover,
   font-size: 60px;
   font-weight: 800;
   justify-content: center;
-  /* line-height: 70px */
   margin: 0;
   min-height: 64px;
   outline: none;
@@ -1487,13 +1484,13 @@ buttonSubmit .verbButton:hover,
   height: var(--btn-arrowsize);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the arrow */
+  transform: translate(-50%, -50%);
 }
 
 .arrowbtn-left {
-  top: 35%; /* Vertical center */
-  left: -120px; /* Adjust the left position */
-  margin-top: -var(--btn-size / 2); /* Offset the vertical position */
+  top: 35%;
+  left: -120px;
+  margin-top: -var(--btn-size / 2);
 }
 
 .arrowbtn-left:after {
@@ -1501,13 +1498,13 @@ buttonSubmit .verbButton:hover,
   margin-top: calc(-1 * var(--btn-arrowsize) / 2);
   border-top: 2px solid;
   border-left: 2px solid;
-  transform: rotateZ(-45deg); /* Change rotation direction */
+  transform: rotateZ(-45deg);
 }
 
 .arrowbtn-right {
-  top: 35%; /* Vertical center */
-  right: -120px; /* Adjust the right position */
-  margin-top: -var(--btn-size / 2); /* Offset the vertical position */
+  top: 35%;
+  right: -120px;
+  margin-top: -var(--btn-size / 2);
 }
 
 .arrowbtn-right:after {
@@ -1515,7 +1512,7 @@ buttonSubmit .verbButton:hover,
   margin-top: calc(-1 * var(--btn-arrowsize) / 2);
   border-bottom: 2px solid;
   border-right: 2px solid;
-  transform: rotateZ(315deg); /* Change rotation direction */
+  transform: rotateZ(315deg);
 }
 .backButton {
   left: 50px;
@@ -1560,8 +1557,8 @@ buttonSubmit .verbButton:hover,
 }
 .timer {
   position: absolute;
-  width: 300px; /* Adjust width as needed */
-  height: 75px; /* Adjust height as needed */
+  width: 300px;
+  height: 75px;
   bottom: 4px;
   right: 1px;
   color: rgb(48, 10, 10);
@@ -1570,30 +1567,30 @@ buttonSubmit .verbButton:hover,
 
 .earlySubmit {
   position: absolute;
-  width: 20vw; /* Adjust width as needed */
-  height: 7vh; /* Adjust height as needed */
-  top: 3vh; /* Adjust top position as needed */
-  left: 2vw; /* Adjust left position as needed */
+  width: 20vw;
+  height: 7vh;
+  top: 3vh;
+  left: 2vw;
   appearance: button;
   backface-visibility: hidden;
   background-color: #405cf5;
-  border-radius: 3vw; /* Adjust border radius proportionally */
+  border-radius: 3vw;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
-    /* Adjust box shadow units */ rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0,
+ rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0,
     rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     Ubuntu, sans-serif;
-  font-size: 4vw; /* Adjust font size proportionally */
+  font-size: 4vw;
   height: 7vh;
   line-height: 1.15;
-  margin: 1.5vh 0 0; /* Adjust margin units */
+  margin: 1.5vh 0 0;
   outline: none;
   overflow: hidden;
-  padding: 0 3vw; /* Adjust padding units */
+  padding: 0 3vw;
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
@@ -1610,5 +1607,5 @@ buttonSubmit .verbButton:hover,
 .earlySubmit:focus {
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
     rgba(50, 50, 93, 0.2) 0 0.5vh 1.5vh 0, rgba(0, 0, 0, 0.1) 0 0.2vh 0.2vh 0,
-    rgba(50, 151, 211, 0.3) 0 0 0 1vw; /* Adjust box shadow units */
+    rgba(50, 151, 211, 0.3) 0 0 0 1vw;
 }

@@ -10,6 +10,8 @@
   "author": "Luca Cristian",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "cssnano": "^6.1.1",
+    "parcel": "^2.10.3",
+    "postcss": "^8.4.38"
   }
 }

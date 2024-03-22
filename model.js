@@ -128,7 +128,6 @@ export const displayRandomSubstantive = function () {
   const random = randomNumber();
   randomOutsideScope = random;
   substantiveContainer.innerHTML = `${wordsArray[random].word}/${wordsArray[random].english}`;
-  // console.log(`wordsArray[${randomNumber}].word`);
 };
 let score = 0;
 export const procesateGuess = function () {
@@ -218,8 +217,6 @@ export const procesateLeaderBoard1 = function () {
   // Store the updated leaderboard1 array
   localStorage.setItem("user_data", JSON.stringify(leaderboard1));
 
-  console.log(leaderboard1);
-
   // Retrieve and log the stored data
   let storedUserData = localStorage.getItem("user_data");
 
@@ -251,13 +248,11 @@ function getRandomNumber(max) {
   return Math.floor(Math.random() * (max + 1));
 }
 
-// Function to get a random verb object from the array
 function getRandomVerb() {
   const randomIndex = getRandomNumber(verbsArray.length - 1);
   return verbsArray[randomIndex];
 }
 
-// Function to get a random tense property from a verb object
 function getRandomTense(verbObject) {
   const tenseProperties = Object.keys(verbObject);
 
@@ -269,36 +264,29 @@ function getRandomTense(verbObject) {
   return commonTenses[randomTenseIndex];
 }
 
-// Function to get a random person property from a tense object
 function getRandomPerson(tenseObject) {
   const personProperties = Object.keys(tenseObject);
   const randomPersonIndex = getRandomNumber(personProperties.length - 1);
   return personProperties[randomPersonIndex];
 }
 
-// Example usage
-
 function displayCSSProperties(element) {
-  // Check if element exists
   if (!element) {
     console.error("Element is null or undefined.");
     return;
   }
 
-  // Get the computed styles of the selected element
   var computedStyles = window.getComputedStyle(element);
 
   // Create an object to store CSS properties
   var cssProperties = {};
 
-  // Store CSS properties in the object
   for (var i = 0; i < computedStyles.length; i++) {
     var propertyName = computedStyles[i];
     var propertyValue = computedStyles.getPropertyValue(propertyName);
     cssProperties[propertyName] = propertyValue;
   }
 
-  // Return the object containing CSS properties
   console.log(cssProperties);
 }
 
@@ -348,17 +336,13 @@ export const startAndProcesateGame2 = function () {
 
   checkBoxes.classList.remove("checkBoxes");
   verbTenseSelection.classList.toggle("display1");
-  //console.log(`Infinitive: ${randomVerb.infinitive}`);
-  //console.log(`Tense: ${randomTense}`);
-  //console.log(`Person: ${randomPerson}`);
-  // console.log(`${randomVerb[randomTense][randomPerson]}`);
+
   verbConjugationOutsideScope = `${randomVerb[randomTense][randomPerson]}`;
   verbView.classList.toggle("display1");
   displayTense.innerHTML = randomTense;
-  // displayPerson.innerHTML = randomPerson;
+
   displayVerb.innerHTML = randomVerb.infinitive;
 
-  // Corrected selector
   userAnswerLabel.innerText = `${randomPerson}`;
 };
 const previousAnswer = document.querySelector(".displayPreviousAnswer");
@@ -443,7 +427,7 @@ export const startGame4 = function () {
   button4.classList.toggle("display1");
   backButton.classList.toggle("display1");
   submitEarly.classList.toggle("display1");
-  // console.log(displayWord);
+
   displayWord.classList.toggle("display1");
   score = 0;
   scoreContainer.classList.toggle("display1");
@@ -453,14 +437,12 @@ export const startGame4 = function () {
   game4();
 };
 
-// Function to get unique random indices
 function getRandomUniqueIndices(max, excludeIndex, count) {
   const indices = [];
 
   while (indices.length < count) {
     const randomIndex = getRandomNumber(max - 1);
 
-    // Ensure the index is not the excluded index or already in the array
     if (randomIndex !== excludeIndex && !indices.includes(randomIndex)) {
       indices.push(randomIndex);
     }
@@ -469,7 +451,6 @@ function getRandomUniqueIndices(max, excludeIndex, count) {
   return indices;
 }
 
-// Function to shuffle an array
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -505,10 +486,9 @@ const game3 = function () {
   const randomWordIndex = getRandomNumber(wordsArray2.length);
   const randomWord = wordsArray2[randomWordIndex];
 
-  // Display the French word in displayWord element
   displayWord.innerHTML = randomWord.french;
   englishOutsideScope = randomWord.english;
-  // Get two unique random indices for the other two buttons
+
   const indices = getRandomUniqueIndices(
     wordsArray2.length,
     randomWordIndex,
@@ -517,19 +497,16 @@ const game3 = function () {
   const randomIndex1 = indices[0];
   const randomIndex2 = indices[1];
 
-  // Create an array with the English words
   const englishWords = [
     wordsArray2[randomIndex1].english,
     randomWord.english,
     wordsArray2[randomIndex2].english,
   ];
 
-  // Shuffle the array to randomize the positions
   shuffleArray(englishWords);
 
-  // Set English words for the options buttons
   buttonOption1.innerHTML = englishWords[0];
-  buttonOption2.innerHTML = englishWords[1]; // Displaying the English word for the main display word
+  buttonOption2.innerHTML = englishWords[1];
   buttonOption3.innerHTML = englishWords[2];
 };
 let frenchOutsideScope;
@@ -549,19 +526,16 @@ const game4 = function () {
   const randomIndex1 = indices[0];
   const randomIndex2 = indices[1];
 
-  // Create an array with the English words
   const frenchWords = [
     wordsArray2[randomIndex1].french,
     randomWord1.french,
     wordsArray2[randomIndex2].french,
   ];
 
-  // Shuffle the array to randomize the positions
   shuffleArray(frenchWords);
 
-  // Set English words for the options buttons
   buttonOption4.innerHTML = frenchWords[0];
-  buttonOption5.innerHTML = frenchWords[1]; // Displaying the English word for the main display word
+  buttonOption5.innerHTML = frenchWords[1];
   buttonOption6.innerHTML = frenchWords[2];
   console.log(buttonOption4.innerHTML);
 };
@@ -594,7 +568,7 @@ export const renderLeaderboard = function () {
   backButton.classList.toggle("display1");
   if (currentLeaderBoard === 1) previousButton.classList.add("display1");
   if (currentLeaderBoard === 4) nextButton.classList.add("display1");
-  // renderSpecificLeaderboard(sortLeaderboardTop5(parsedUserData, nameGame4));
+
   addLeaderBoard(gameNames[currentLeaderBoard - 1]);
 };
 
@@ -645,47 +619,37 @@ export const returnAtStart = function () {
   displayCSSProperties(checkBoxes);
 };
 
-let timerInterval; // Declare timerInterval outside the function to access it later
+let timerInterval;
 
 const startTimer = function (totalSeconds, start) {
-  // Get the timer element
   const timerElement = document.querySelector(".timer");
 
-  // Reset the timer if start is false or undefined
   if (!start) {
     clearInterval(timerInterval);
     timerElement.textContent = "";
     return; // Exit the function
   }
 
-  // Set the initial timer value in seconds
   let timerValue = totalSeconds;
 
-  // Function to update the timer
   function updateTimer() {
-    // Check if the timer has reached 0
     if (timerValue <= 0) {
-      clearInterval(timerInterval); // Stop the timer if it reaches 0
-      timerElement.textContent = ""; // Clear the timer element
+      clearInterval(timerInterval);
+      timerElement.textContent = "";
     } else {
-      // Calculate minutes and seconds
       const minutes = Math.floor(timerValue / 60);
       const seconds = timerValue % 60;
 
-      // Display the timer in MM:SS format
       timerElement.textContent = `${minutes
         .toString()
         .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
-      // Decrement the timer value
       timerValue--;
     }
   }
 
-  // Call updateTimer immediately to display the initial timer value
   updateTimer();
 
-  // Call updateTimer every second
   timerInterval = setInterval(updateTimer, 1000);
 };
 
@@ -700,5 +664,3 @@ export const earlySubmit = function () {
 
   if (currentGame === nameGame4) displayLeaderboardForm4();
 };
-startGame1;
-score;

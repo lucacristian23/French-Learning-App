@@ -15,7 +15,6 @@ body {
   height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #6912bb 0%, #1098f3 100%);
-  /*display: flex; sa rezolv cu DICE BUTTONS*/
   align-items: center;
   justify-content: center;
 }
@@ -30,18 +29,16 @@ body {
 
 @media (max-width: 576px) {
   .image-above {
-    width: 50%; /* Adjust the width as needed */
-    max-width: 300px; /* Adjust the maximum width as needed */
+    width: 50%;
+    max-width: 300px;
   }
 }
 .button {
-  /* Attributes to adjust for different device sizes */
-  top: 45vh; /* Adjust this value based on the height of the flag */
-  height: 10vh; /* Adjust the button height as needed */
-  width: 31%; /* Adjust the button width as needed */
-  font-size: 6vh; /* Adjust the font size as needed */
+  top: 45vh;
+  height: 10vh;
+  width: 31%;
+  font-size: 6vh;
 
-  /* Remaining CSS attributes */
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -93,24 +90,23 @@ body {
 }
 @media (max-width: 576px) {
   .button {
-    top: 45vh; /* Adjust this value based on the height of the flag */
-    height: 10vh; /* Adjust the button height as needed */
-    width: 80%; /* Adjust the button width as needed */
-    font-size: 5vh; /* Adjust the font size as needed */
+    top: 45vh;
+    height: 10vh;
+    width: 80%;
+    font-size: 5vh;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .button {
-    top: 45vh; /* Adjust this value based on the height of the flag */
-    height: 10vh; /* Adjust the button height as needed */
-    width: 75%; /* Adjust the button width as needed */
-    font-size: 6vh; /* Adjust the font size as needed */
+    top: 45vh;
+    height: 10vh;
+    width: 75%;
+    font-size: 6vh;
   }
 }
 
 .button-leaderboard {
-  /* Attributes that may need adjustment for different device sizes */
   top: 58vh;
   height: 10vh;
   width: 31%;
@@ -118,7 +114,6 @@ body {
   padding-right: 5vh;
   font-size: 6vh;
 
-  /* Complete CSS class with adjusted attributes */
   position: absolute;
   top: 58vh;
   left: 50%;
@@ -172,19 +167,19 @@ body {
 
 @media (max-width: 576px) {
   .button-leaderboard {
-    top: 58vh; /* Adjust this value based on the height of the flag */
-    height: 10vh; /* Adjust the button height as needed */
-    width: 80%; /* Adjust the button width as needed */
-    font-size: 5vh; /* Adjust the font size as needed */
+    top: 58vh;
+    height: 10vh;
+    width: 80%;
+    font-size: 5vh;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .button-leaderboard {
-    top: 58vh; /* Adjust this value based on the height of the flag */
-    height: 10vh; /* Adjust the button height as needed */
-    width: 75%; /* Adjust the button width as needed */
-    font-size: 6vh; /* Adjust the font size as needed */
+    top: 58vh;
+    height: 10vh;
+    width: 75%;
+    font-size: 6vh;
   }
 }
 
@@ -205,8 +200,8 @@ body {
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
-  height: 11vh; /* Adjust the button height as needed */
-  width: 26vw; /* Adjust the button width as needed */
+  height: 11vh;
+  width: 26vw;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -245,17 +240,16 @@ body {
   }
 }
 
-/* Positioning for each dice button */
 .dice-button1 {
-  top: 6%; /* Adjust the distance from the top as needed */
-  left: 15%; /* Adjust the distance from the left as needed */
+  top: 6%;
+  left: 15%;
   position: absolute;
-  font-size: 3vh; /* Adjust the font size as needed */
+  font-size: 3vh;
 }
 
 @media (max-width: 576px) {
   .dice-button1 {
-    font-size: 0.8vh; /* Adjust the font size as needed */
+    font-size: 0.8vh;
   }
 }
 
@@ -265,15 +259,15 @@ body {
   }
 }
 .dice-button2 {
-  top: 6%; /* Adjust the distance from the top as needed */
-  right: 15%; /* Adjust the distance from the right as needed */
+  top: 6%;
+  right: 15%;
   position: absolute;
-  font-size: 2vh; /* Adjust the font size as needed */
+  font-size: 2vh;
 }
 
 @media (max-width: 576px) {
   .dice-button2 {
-    font-size: 0.6vh; /* Adjust the font size as needed */
+    font-size: 0.6vh;
   }
 }
 
@@ -284,15 +278,15 @@ body {
 }
 
 .dice-button3 {
-  bottom: 6%; /* Adjust the distance from the bottom as needed */
-  left: 15%; /* Adjust the distance from the left as needed */
+  bottom: 6%;
+  left: 15%;
   position: absolute;
-  font-size: 3vh; /* Adjust the font size as needed */
+  font-size: 3vh;
 }
 
 @media (max-width: 576px) {
   .dice-button3 {
-    font-size: 0.8vh; /* Adjust the font size as needed */
+    font-size: 0.8vh;
   }
 }
 
@@ -303,15 +297,15 @@ body {
 }
 
 .dice-button4 {
-  bottom: 6%; /* Adjust the distance from the bottom as needed */
-  right: 15%; /* Adjust the distance from the right as needed */
+  bottom: 6%;
+  right: 15%;
   position: absolute;
-  font-size: 2.4vh; /* Adjust the font size as needed */
+  font-size: 2.4vh;
 }
 
 @media (max-width: 576px) {
   .dice-button4 {
-    font-size: 0.7vh; /* Adjust the font size as needed */
+    font-size: 0.7vh;
   }
 }
 
@@ -322,24 +316,21 @@ body {
 }
 
 .displayGameInfo {
-  width: 70%; /* Adjust width as needed */
-  height: 50%; /* Adjust height as needed */
+  width: 70%;
+  height: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   color: rgb(48, 10, 10);
-  font-size: 4.5vh; /* Adjust font size for responsiveness */
+  font-size: 4.5vh;
   font-family: "Didot", serif;
-
-  /* border: 2px solid red;  
-  box-sizing: border-box; */
 }
 
 .backButton {
-  left: 2%; /* Adjust left position relative to the viewport width */
-  bottom: 5%; /* Adjust bottom position relative to the viewport height */
+  left: 2%;
+  bottom: 5%;
   background-color: #222;
   border-radius: 4px;
   border-style: none;
@@ -347,23 +338,23 @@ body {
   color: #fff;
   cursor: pointer;
   font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.9vw; /* Adjust font size relative to the viewport width */
+  font-size: 0.9vw;
   font-weight: 700;
   line-height: 1.5;
   margin: 0;
   max-width: none;
-  min-height: 3vh; /* Adjust minimum height relative to the viewport height */
-  min-width: 10%; /* Adjust minimum width relative to the viewport width */
+  min-height: 3vh;
+  min-width: 10%;
   outline: none;
   overflow: hidden;
-  padding: 0.5vw 1vw; /* Adjust padding relative to the viewport width */
+  padding: 0.5vw 1vw;
   position: absolute;
   text-align: center;
   text-transform: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 2%; /* Adjust width relative to the viewport width */
+  width: 2%;
 }
 
 .backButton:hover,
@@ -373,13 +364,13 @@ body {
 
 @media (max-width: 576px) {
   .backButton {
-    font-size: 1vh; /* Adjust the font size as needed */
+    font-size: 1vh;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .backButton {
-    font-size: 1.4vh; /* Adjust the font size as needed */
+    font-size: 1.4vh;
   }
 }
 
@@ -528,86 +519,81 @@ body {
 }
 
 .displaySubstantive {
-  /* Responsive Design Attributes */
-  top: 8%; /* Adjust top position as needed */
-  width: 100%; /* Adjust width as needed */
-  max-width: 90%; /* Adjust max-width as needed */
-  height: auto; /* Adjust height as needed */
-  font-size: 5vw; /* Adjust font size for responsiveness */
+  top: 8%;
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  font-size: 5vw;
 
-  /* Centering Horizontally */
   left: 50%;
   transform: translateX(-50%);
 
-  /* Other Attributes */
   position: absolute;
   pointer-events: none;
   color: rgb(48, 10, 10);
-  font-family: "Didot", serif; /* Default font family */
-  text-align: center; /* Default text alignment */
+  font-family: "Didot", serif;
+  text-align: center;
 }
 
 @media (max-width: 576px) {
   .displaySubstantive {
-    top: 17%; /* Adjust top position as needed */
-    width: 100%; /* Adjust width as needed */
-    max-width: 80%; /* Adjust max-width as needed */
-    height: auto; /* Adjust height as needed */
-    font-size: 16vw; /* Adjust font size for responsiveness */
+    top: 17%;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    font-size: 16vw;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .displaySubstantive {
-    top: 8%; /* Adjust top position as needed */
-    width: 100%; /* Adjust width as needed */
-    max-width: 80%; /* Adjust max-width as needed */
-    height: auto; /* Adjust height as needed */
-    font-size: 11vw; /* Adjust font size for responsiveness */
+    top: 8%;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    font-size: 11vw;
   }
 }
 
 .displayScore1 {
   position: absolute;
-  width: 4vw; /* Adjust width as needed */
-  height: 7.5vh; /* Adjust height as needed */
+  width: 4vw;
+  height: 7.5vh;
   pointer-events: none;
   bottom: 4vh;
-  right: 17%; /* Adjust the value to move it more to the right */
+  right: 17%;
   color: rgb(48, 10, 10);
   font-size: 4.5vh;
-  /*border: 2px solid red;  Add border with red color 
-  box-sizing: border-box;  Ensure border is included in width and height */
 }
 
 @media (max-width: 576px) {
   .displayScore1 {
-    width: 30vw; /* Adjust width as needed */
-    height: 9.5vh; /* Adjust height as needed */
+    width: 30vw;
+    height: 9.5vh;
     bottom: 9vh;
-    right: 16%; /* Adjust the value to move it more to the right */
+    right: 16%;
     font-size: 3vh;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .displayScore1 {
-    width: 30vw; /* Adjust width as needed */
-    height: 9.5vh; /* Adjust height as needed */
+    width: 30vw;
+    height: 9.5vh;
     bottom: 9vh;
-    right: 13%; /* Adjust the value to move it more to the right */
+    right: 13%;
     font-size: 4.5vh;
   }
 }
 
 .timer {
   position: absolute;
-  width: 6vw; /* Adjust width as needed */
-  height: 7.5vh; /* Adjust height as needed */
+  width: 6vw;
+  height: 7.5vh;
   bottom: 4vh;
   left: 7%;
   color: rgb(48, 10, 10);
-  font-size: 4.5vh; /* Adjust font size as needed */
+  font-size: 4.5vh;
 }
 
 @media (max-width: 576px) {
@@ -625,30 +611,29 @@ body {
 }
 .earlySubmit {
   position: absolute;
-  width: 12vw; /* Adjust width as needed */
-  height: 4vh; /* Adjust height as needed */
-  top: 3vh; /* Adjust top position as needed */
-  left: 2vw; /* Adjust left position as needed */
+  width: 12vw;
+  height: 4vh;
+  top: 3vh;
+  left: 2vw;
   appearance: button;
   backface-visibility: hidden;
   background-color: #405cf5;
-  border-radius: 0.5vw; /* Adjust border radius proportionally */
+  border-radius: 0.5vw;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
-    /* Adjust box shadow units */ rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0,
-    rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
+    rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0, rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     Ubuntu, sans-serif;
-  font-size: 0.8vw; /* Adjust font size proportionally */
+  font-size: 0.8vw;
   height: 7vh;
   line-height: 1.15;
-  margin: 1.5vh 0 0; /* Adjust margin units */
+  margin: 1.5vh 0 0;
   outline: none;
   overflow: hidden;
-  padding: 0 3vw; /* Adjust padding units */
+  padding: 0 3vw;
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
@@ -665,40 +650,38 @@ body {
 .earlySubmit:focus {
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
     rgba(50, 50, 93, 0.2) 0 0.5vh 1.5vh 0, rgba(0, 0, 0, 0.1) 0 0.2vh 0.2vh 0,
-    rgba(50, 151, 211, 0.3) 0 0 0 1vw; /* Adjust box shadow units */
+    rgba(50, 151, 211, 0.3) 0 0 0 1vw;
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .earlySubmit {
-    width: 16vw; /* Adjust width as needed */
-    height: 3vh; /* Adjust height as needed */
-    top: 2vh; /* Adjust top position as needed */
-    left: 5vw; /* Adjust left position as needed */
-    border-radius: 0.5vw; /* Adjust border radius proportionally */
+    width: 16vw;
+    height: 3vh;
+    top: 2vh;
+    left: 5vw;
+    border-radius: 0.5vw;
     box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
-      /* Adjust box shadow units */ rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0,
-      rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
-    font-size: 3vw; /* Adjust font size proportionally */
+      rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0, rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
+    font-size: 3vw;
     height: 7vh;
-    margin: 1.5vh 0 0; /* Adjust margin units */
-    padding: 0 3vw; /* Adjust padding units */
+    margin: 1.5vh 0 0;
+    padding: 0 3vw;
   }
 }
 
 @media (max-width: 576px) {
   .earlySubmit {
-    width: 20vw; /* Adjust width as needed */
-    height: 4vh; /* Adjust height as needed */
-    top: 3vh; /* Adjust top position as needed */
-    left: 7vw; /* Adjust left position as needed */
-    border-radius: 0.5vw; /* Adjust border radius proportionally */
+    width: 20vw;
+    height: 4vh;
+    top: 3vh;
+    left: 7vw;
+    border-radius: 0.5vw;
     box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.5vw inset,
-      /* Adjust box shadow units */ rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0,
-      rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
-    font-size: 4vw; /* Adjust font size proportionally */
+      rgba(50, 50, 93, 0.1) 0 0.5vh 1.5vh 0, rgba(0, 0, 0, 0.07) 0 0.5vh 0.5vh 0;
+    font-size: 4vw;
     height: 7vh;
-    margin: 1.5vh 0 0; /* Adjust margin units */
-    padding: 0 3vw; /* Adjust padding units */
+    margin: 1.5vh 0 0;
+    padding: 0 3vw;
   }
 }
 
@@ -709,8 +692,6 @@ body {
   left: 50%;
   white-space: nowrap;
   transform: translate(-50%, -50%);
-  /* border: 2px solid red;
-  box-sizing: border-box; */
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -792,7 +773,7 @@ li.leaderboardSubmition {
 
 .playerName {
   font-size: 4vh;
-  width: 50%; /* Adjust the width of the input field */
+  width: 50%;
   height: 5vh;
 }
 
@@ -827,7 +808,7 @@ li.leaderboardSubmition {
   .buttonSubmit {
     left: 4vh;
     bottom: 33vh;
-    transform: scale(0.7); /* Adjust the scale factor as needed */
+    transform: scale(0.7);
   }
 }
 
@@ -879,7 +860,7 @@ li {
   .skipButton {
     left: 1vh;
     bottom: 10vh;
-    transform: scale(0.5); /* Adjust the scale factor as needed */
+    transform: scale(0.5);
   }
 }
 
@@ -887,7 +868,7 @@ li {
   .skipButton {
     left: 15vh;
     bottom: 10vh;
-    transform: scale(1); /* Adjust the scale factor as needed */
+    transform: scale(1);
     font-size: 3vh;
   }
 }
@@ -1049,7 +1030,7 @@ li {
     position: absolute;
     bottom: 27vh;
 
-    padding: 0px; /* Adjust padding to align buttons with the border */
+    padding: 0px;
   }
 
   .optionButtons {
@@ -1059,7 +1040,7 @@ li {
     width: 17vh;
     font-size: 2vh;
     transform: scale(0.6);
-    padding: 5px 10px; /* Adjust the values as needed */
+    padding: 5px 10px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
@@ -1076,13 +1057,13 @@ li {
     font-size: 5vh;
     transform: scale(0.6);
     height: 9.75vh;
-    flex: 1; /* Allow buttons to evenly distribute within the container */
+    flex: 1;
   }
 
   .option1Button,
   .option2Button,
   .option3Button {
-    width: 33.33%; /* Each button takes up one-third of the container width */
+    width: 33.33%;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
@@ -1344,7 +1325,7 @@ li {
     position: absolute;
     bottom: 27vh;
 
-    padding: 0px; /* Adjust padding to align buttons with the border */
+    padding: 0px;
   }
 
   .optionButtons1 {
@@ -1354,7 +1335,7 @@ li {
     width: 17vh;
     font-size: 2vh;
     transform: scale(0.6);
-    padding: 5px 10px; /* Adjust the values as needed */
+    padding: 5px 10px;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
@@ -1371,13 +1352,13 @@ li {
     font-size: 5vh;
     transform: scale(0.6);
     height: 9.75vh;
-    flex: 1; /* Allow buttons to evenly distribute within the container */
+    flex: 1;
   }
 
   .option4Button,
   .option5Button,
   .option6Button {
-    width: 33.33%; /* Each button takes up one-third of the container width */
+    width: 33.33%;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
@@ -1426,10 +1407,9 @@ li {
   gap: 15px;
   left: 50%;
   transform: translateX(-50%);
-  /*border: 2px solid black; */
   width: 80%;
-  justify-content: center; /* Horizontally center the items */
-  align-items: center; /* Vertically center the items */
+  justify-content: center;
+  align-items: center;
   bottom: 49vh;
 }
 
@@ -1444,8 +1424,8 @@ li {
     transform: translateX(-50%);
 
     width: 80%;
-    justify-content: center; /* Horizontally center the items */
-    align-items: center; /* Vertically center the items */
+    justify-content: center;
+    align-items: center;
     bottom: 49vh;
   }
 }
@@ -1462,10 +1442,10 @@ li {
 .checkbox-wrapper-42 .cbx {
   position: relative;
   top: 1px;
-  width: 1.6em; /* Changed to em units for relative sizing */
-  height: 1.6em; /* Changed to em units for relative sizing */
-  border: 0.15em solid #c8ccd4; /* Changed to em units for relative sizing */
-  border-radius: 0.3em; /* Changed to em units for relative sizing */
+  width: 1.6em;
+  height: 1.6em;
+  border: 0.15em solid #c8ccd4;
+  border-radius: 0.3em;
   vertical-align: middle;
   transition: background 0.1s ease;
   cursor: pointer;
@@ -1474,20 +1454,20 @@ li {
 .checkbox-wrapper-42 .cbx:after {
   content: "";
   position: absolute;
-  top: 0.1em; /* Changed to em units for relative sizing */
-  left: 0.5em; /* Changed to em units for relative sizing */
-  width: 0.5em; /* Changed to em units for relative sizing */
-  height: 1.1em; /* Changed to em units for relative sizing */
+  top: 0.1em;
+  left: 0.5em;
+  width: 0.5em;
+  height: 1.1em;
   opacity: 0;
   transform: rotate(45deg) scale(0);
-  border-right: 0.2em solid #fff; /* Changed to em units for relative sizing */
-  border-bottom: 0.2em solid #fff; /* Changed to em units for relative sizing */
+  border-right: 0.2em solid #fff;
+  border-bottom: 0.2em solid #fff;
   transition: all 0.3s ease;
   transition-delay: 0.15s;
 }
 
 .checkbox-wrapper-42 .lbl {
-  margin-left: 0.5em; /* Changed to em units for relative sizing */
+  margin-left: 0.5em;
   vertical-align: middle;
   cursor: pointer;
   font-size: 1.5em;
@@ -1555,7 +1535,6 @@ li {
     transform: translateX(-50%);
     font-weight: bold;
     font-size: 2.8vh;
-    /*border: 2px solid black;*/
   }
 }
 
@@ -1569,7 +1548,6 @@ li {
     transform: translateX(-50%);
     font-weight: bold;
     font-size: 4.4vh;
-    /*border: 2px solid black;*/
   }
 }
 
@@ -1600,7 +1578,6 @@ li {
     left: 50%;
     transform: translateX(-50%);
     top: 15vh;
-    /* border: 2px solid black; */
   }
 }
 
@@ -1614,11 +1591,9 @@ li {
   left: 40%;
   transform: translateX(-50%);
   --c: #fff;
-  /* text color */
   background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%)
       var(--_p, 100%) / 300% no-repeat,
     #004dff;
-  /* background color */
   color: #0000;
   border: none;
   transform: perspective(500px) rotateY(calc(20deg * var(--_i, -1)));
@@ -1657,7 +1632,6 @@ li {
     top: 61vh;
     left: 48%;
     transform: translateX(-50%);
-    /* border: 2px solid black; */
   }
 }
 
@@ -1705,7 +1679,6 @@ li {
   }
 }
 
-/* A1*/
 @media (max-width: 389px) {
   .checkBoxes {
     position: absolute;
@@ -1717,8 +1690,8 @@ li {
     transform: translateX(-50%);
 
     width: 80%;
-    justify-content: center; /* Horizontally center the items */
-    align-items: center; /* Vertically center the items */
+    justify-content: center;
+    align-items: center;
     bottom: 36vh;
   }
 
@@ -1731,7 +1704,6 @@ li {
     transform: translateX(-50%);
     font-weight: bold;
     font-size: 3vh;
-    /*border: 2px solid black;*/
   }
 
   .startGame2Button {
@@ -1742,7 +1714,6 @@ li {
     top: 75vh;
     left: 48%;
     transform: translateX(-50%);
-    /* border: 2px solid black; */
   }
 
   .selectTensesDescription {
@@ -1752,7 +1723,6 @@ li {
     left: 50%;
     transform: translateX(-50%);
     top: 10vh;
-    /* border: 2px solid black; */
   }
 
   .errorTense {
@@ -1778,7 +1748,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 7.5vh; /* Adjust the gap between buttons as needed */
+  gap: 7.5vh;
 
   height: 6vh;
   width: 155vh;
@@ -1798,8 +1768,8 @@ li {
     transform: translateX(-50%);
 
     width: 60%;
-    justify-content: center; /* Horizontally center the items */
-    align-items: center; /* Vertically center the items */
+    justify-content: center;
+    align-items: center;
     bottom: 36vh;
   }
 
@@ -1822,7 +1792,6 @@ li {
     top: 75vh;
     left: 48%;
     transform: translateX(-50%);
-    /* border: 2px solid black; */
   }
 
   .selectTensesDescription {
@@ -1853,7 +1822,6 @@ li {
     top: 61vh;
     left: 48%;
     transform: translateX(-50%);
-    /* border: 2px solid black; */
   }
 }
 
@@ -1879,8 +1847,8 @@ li {
 }
 
 .inputPerson {
-  position: fixed; /* Change to fixed position */
-  left: -30%; /* Adjust the left position as needed */
+  position: fixed;
+  left: -30%;
   font-size: 5.5vh;
   width: 30vh;
   height: 50vh;
@@ -1929,9 +1897,9 @@ buttonSubmit .verbButton:hover,
 }
 
 #userAnswer {
-  font-size: 30px; /* Adjust the font size as needed */
-  width: 250px; /* Adjust the width as needed */
-  height: 40px; /* Adjust the height as needed */
+  font-size: 30px;
+  width: 250px;
+  height: 40px;
 }
 .buttonSpecial {
   transform: scale(0.9);
@@ -1988,168 +1956,37 @@ buttonSubmit .verbButton:hover,
   color: #000000;
 }
 
-/*
-.buttonÀ {
-  position: fixed;
-  right: 1185px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÀ {
-  position: fixed;
-  right: 1060px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.buttonÂ {
-  position: fixed;
-  right: 935px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÄ {
-  position: fixed;
-  right: 810px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÉ {
-  position: fixed;
-  right: 685px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÈ {
-  position: fixed;
-  right: 560px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÊ {
-  position: fixed;
-  right: 435px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonË {
-  position: fixed;
-  right: 310px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÎ {
-  position: fixed;
-  right: 185px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÏ {
-  position: fixed;
-  right: 60px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÔ {
-  position: fixed;
-  right: -65px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonŒ {
-  position: fixed;
-  right: -190px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÙ {
-  position: fixed;
-  right: -315px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÛ {
-  position: fixed;
-  right: -440px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÜ {
-  position: fixed;
-  right: -565px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.buttonÇ {
-  position: fixed;
-  right: -690px;
-  width: 40px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-*/
 .displayPreviousAnswer {
   position: absolute;
   left: 13%;
-  top: 10vh; /* Converted from 100px */
+  top: 10vh;
   transform: translate(-50%, -50%);
-  font-size: 6vh; /* Adjusted for consistency */
+  font-size: 6vh;
 }
 
 .displayPreviousCorrectAnswer {
   position: absolute;
   left: 87%;
-  top: 10vh; /* Converted from 100px */
+  top: 10vh;
   transform: translate(-50%, -50%);
-  font-size: 6vh; /* Adjusted for consistency */
+  font-size: 6vh;
 }
 
 @media (max-width: 389px) {
   .displayPreviousAnswer {
     position: absolute;
     left: 13%;
-    top: 20vh; /* Converted from 100px */
+    top: 20vh;
     transform: translate(-50%, -50%);
-    font-size: 3vh; /* Adjusted for consistency */
+    font-size: 3vh;
   }
 
   .displayPreviousCorrectAnswer {
     position: absolute;
     left: 87%;
-    top: 20vh; /* Converted from 100px */
+    top: 20vh;
     transform: translate(-50%, -50%);
-    font-size: 3vh; /* Adjusted for consistency */
+    font-size: 3vh;
   }
 
   .displayVerb {
@@ -2168,39 +2005,39 @@ buttonSubmit .verbButton:hover,
   }
   .inputVerbForm {
     position: fixed;
-    left: 63%; /* (65% / 100) * 100 = 32.5vh */
-    width: 70%; /* (70% / 100) * 100 = 35vh */
+    left: 63%;
+    width: 70%;
     transform: translateX(-50%);
 
-    bottom: 23vh; /* 500px / 1000px * 100 = 50vh */
+    bottom: 23vh;
   }
 
   .inputPerson {
     position: fixed;
-    left: -35%; /* (-22% / 100) * 100 = -11vh */
+    left: -35%;
     font-size: 5vh;
-    width: 30vh; /* 300px / 1000px * 100 = 30vh */
-    height: 50vh; /* 500px / 1000px * 100 = 50vh */
-    bottom: -43.5vh; /* -435px / 1000px * 100 = -43.5vh */
+    width: 30vh;
+    height: 50vh;
+    bottom: -43.5vh;
   }
 
   .verbButton {
     top: 6vh;
     transform: scale(1);
-    font-size: 1.6vh; /* 50px / 1000px * 100 = 5vh */
-    left: 30%; /* 60% / 100 * 100 = 30vh */
-    width: 10vh; /* 150px / 1000px * 100 = 15vh */
-    height: 5vh; /* 50px / 1000px * 100 = 5vh */
+    font-size: 1.6vh;
+    left: 30%;
+    width: 10vh;
+    height: 5vh;
     background: #461b79;
 
-    border-radius: 0.6vh; /* 6px / 1000px * 100 = 0.6vh */
+    border-radius: 0.6vh;
     box-shadow: rgba(0, 0, 0, 0.1) 0.1vh 0.2vh 0.4vh;
   }
 
   #userAnswer {
-    font-size: 3vh; /* 30px / 1000px * 100 = 3vh */
-    width: 15vh; /* 250px / 1000px * 100 = 25vh */
-    height: 4vh; /* 40px / 1000px * 100 = 4vh */
+    font-size: 3vh;
+    width: 15vh;
+    height: 4vh;
   }
 
   .buttonSpecialContainer {
@@ -2208,7 +2045,7 @@ buttonSubmit .verbButton:hover,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2vh; /* Adjust the gap between buttons as needed */
+    gap: 2vh;
 
     height: 14vh;
     width: 40vh;
@@ -2218,8 +2055,8 @@ buttonSubmit .verbButton:hover,
   }
 
   .buttonSpecial {
-    margin-right: 15px; /* Set horizontal margin */
-    margin-bottom: 15px; /* Set vertical margin */
+    margin-right: 15px;
+    margin-bottom: 15px;
 
     transform: scale(0.9);
     bottom: -90px;
@@ -2280,17 +2117,17 @@ buttonSubmit .verbButton:hover,
   .displayPreviousAnswer {
     position: absolute;
     left: 13%;
-    top: 20vh; /* Converted from 100px */
+    top: 20vh;
     transform: translate(-50%, -50%);
-    font-size: 3vh; /* Adjusted for consistency */
+    font-size: 3vh;
   }
 
   .displayPreviousCorrectAnswer {
     position: absolute;
     left: 87%;
-    top: 20vh; /* Converted from 100px */
+    top: 20vh;
     transform: translate(-50%, -50%);
-    font-size: 3vh; /* Adjusted for consistency */
+    font-size: 3vh;
   }
 
   .displayVerb {
@@ -2320,27 +2157,27 @@ buttonSubmit .verbButton:hover,
     position: fixed;
     left: -35%;
     font-size: 5vh;
-    width: 30vh; /* 300px / 1000px * 100 = 30vh */
-    height: 50vh; /* 500px / 1000px * 100 = 50vh */
-    bottom: -43.5vh; /* -435px / 1000px * 100 = -43.5vh */
+    width: 30vh;
+    height: 50vh;
+    bottom: -43.5vh;
   }
 
   .verbButton {
     top: 6vh;
     transform: scale(1);
-    font-size: 3vh; /* 50px / 1000px * 100 = 5vh */
-    left: 30%; /* 60% / 100 * 100 = 30vh */
-    width: 15vh; /* 150px / 1000px * 100 = 15vh */
-    height: 5vh; /* 50px / 1000px * 100 = 5vh */
+    font-size: 3vh;
+    left: 30%;
+    width: 15vh;
+    height: 5vh;
     background: #461b79;
-    border-radius: 0.6vh; /* 6px / 1000px * 100 = 0.6vh */
+    border-radius: 0.6vh;
     box-shadow: rgba(0, 0, 0, 0.1) 0.1vh 0.2vh 0.4vh;
   }
 
   #userAnswer {
-    font-size: 3vh; /* 30px / 1000px * 100 = 3vh */
-    width: 15vh; /* 250px / 1000px * 100 = 25vh */
-    height: 4vh; /* 40px / 1000px * 100 = 4vh */
+    font-size: 3vh;
+    width: 15vh;
+    height: 4vh;
   }
 
   .buttonSpecialContainer {
@@ -2348,7 +2185,7 @@ buttonSubmit .verbButton:hover,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2vh; /* Adjust the gap between buttons as needed */
+    gap: 2vh;
 
     height: 14vh;
     width: 40vh;
@@ -2358,8 +2195,8 @@ buttonSubmit .verbButton:hover,
   }
 
   .buttonSpecial {
-    margin-right: 15px; /* Set horizontal margin */
-    margin-bottom: 15px; /* Set vertical margin */
+    margin-right: 15px;
+    margin-bottom: 15px;
 
     transform: scale(0.9);
     bottom: -90px;
@@ -2420,17 +2257,17 @@ buttonSubmit .verbButton:hover,
   .displayPreviousAnswer {
     position: absolute;
     left: 13%;
-    top: 10vh; /* Converted from 100px */
+    top: 10vh;
     transform: translate(-50%, -50%);
-    font-size: 6vh; /* Adjusted for consistency */
+    font-size: 6vh;
   }
 
   .displayPreviousCorrectAnswer {
     position: absolute;
     left: 87%;
-    top: 10vh; /* Converted from 100px */
+    top: 10vh;
     transform: translate(-50%, -50%);
-    font-size: 6vh; /* Adjusted for consistency */
+    font-size: 6vh;
   }
 
   .displayVerb {
@@ -2449,38 +2286,38 @@ buttonSubmit .verbButton:hover,
   }
   .inputVerbForm {
     position: fixed;
-    left: 60%; /* (65% / 100) * 100 = 32.5vh */
-    width: 65%; /* (70% / 100) * 100 = 35vh */
+    left: 60%;
+    width: 65%;
     transform: translateX(-50%);
 
-    bottom: 27vh; /* 500px / 1000px * 100 = 50vh */
+    bottom: 27vh;
   }
 
   .inputPerson {
     position: fixed;
-    left: -22%; /* (-22% / 100) * 100 = -11vh */
+    left: -22%;
     font-size: 5vh;
-    width: 30vh; /* 300px / 1000px * 100 = 30vh */
-    height: 50vh; /* 500px / 1000px * 100 = 50vh */
-    bottom: -43.5vh; /* -435px / 1000px * 100 = -43.5vh */
+    width: 30vh;
+    height: 50vh;
+    bottom: -43.5vh;
   }
 
   .verbButton {
     top: 6vh;
     transform: scale(1);
-    font-size: 3vh; /* 50px / 1000px * 100 = 5vh */
-    left: 30%; /* 60% / 100 * 100 = 30vh */
-    width: 20vh; /* 150px / 1000px * 100 = 15vh */
-    height: 5vh; /* 50px / 1000px * 100 = 5vh */
+    font-size: 3vh;
+    left: 30%;
+    width: 20vh;
+    height: 5vh;
     background: #461b79;
-    border-radius: 0.6vh; /* 6px / 1000px * 100 = 0.6vh */
+    border-radius: 0.6vh;
     box-shadow: rgba(0, 0, 0, 0.1) 0.1vh 0.2vh 0.4vh;
   }
 
   #userAnswer {
-    font-size: 3vh; /* 30px / 1000px * 100 = 3vh */
-    width: 25vh; /* 250px / 1000px * 100 = 25vh */
-    height: 4vh; /* 40px / 1000px * 100 = 4vh */
+    font-size: 3vh;
+    width: 25vh;
+    height: 4vh;
   }
 
   .buttonSpecialContainer {
@@ -2488,7 +2325,7 @@ buttonSubmit .verbButton:hover,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4vh; /* Adjust the gap between buttons as needed */
+    gap: 4vh;
 
     height: 14vh;
     width: 70vh;
@@ -2498,8 +2335,8 @@ buttonSubmit .verbButton:hover,
   }
 
   .buttonSpecial {
-    margin-right: 15px; /* Set horizontal margin */
-    margin-bottom: 15px; /* Set vertical margin */
+    margin-right: 15px;
+    margin-bottom: 15px;
 
     transform: scale(0.9);
     bottom: -90px;
@@ -2577,8 +2414,8 @@ buttonSubmit .verbButton:hover,
   }
 
   .inputPerson {
-    position: fixed; /* Change to fixed position */
-    left: -42%; /* Adjust the left position as needed */
+    position: fixed;
+    left: -42%;
     font-size: 5.5vh;
     width: 30vh;
     height: 50vh;
@@ -2592,7 +2429,7 @@ buttonSubmit .verbButton:hover,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4.5vh; /* Adjust the gap between buttons as needed */
+    gap: 4.5vh;
     border: 1px solid black;
     height: 28vh;
     width: 50vh;
@@ -2601,8 +2438,8 @@ buttonSubmit .verbButton:hover,
     top: 50vh;
   }
   .buttonSpecial {
-    margin-right: 5px; /* Set horizontal margin */
-    margin-bottom: 5px; /* Set vertical margin */
+    margin-right: 5px;
+    margin-bottom: 5px;
     transform: scale(0.8);
     display: flex;
     font-size: 2.7vh;
@@ -2864,13 +2701,13 @@ buttonSubmit .verbButton:hover,
   height: var(--btn-arrowsize);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the arrow */
+  transform: translate(-50%, -50%);
 }
 
 .arrowbtn-left {
-  top: 35%; /* Vertical center */
-  left: -12vh; /* Adjust the left position */
-  margin-top: -var(--btn-size / 2); /* Offset the vertical position */
+  top: 35%;
+  left: -12vh;
+  margin-top: -var(--btn-size / 2);
 }
 
 .arrowbtn-left:after {
@@ -2878,13 +2715,13 @@ buttonSubmit .verbButton:hover,
   margin-top: calc(-1 * var(--btn-arrowsize) / 2);
   border-top: 2px solid;
   border-left: 2px solid;
-  transform: rotateZ(-45deg); /* Change rotation direction */
+  transform: rotateZ(-45deg);
 }
 
 .arrowbtn-right {
-  top: 35%; /* Vertical center */
-  right: -12vh; /* Adjust the right position */
-  margin-top: -var(--btn-size / 2); /* Offset the vertical position */
+  top: 35%;
+  right: -12vh;
+  margin-top: -var(--btn-size / 2);
 }
 
 .arrowbtn-right:after {
@@ -2892,20 +2729,20 @@ buttonSubmit .verbButton:hover,
   margin-top: calc(-1 * var(--btn-arrowsize) / 2);
   border-bottom: 2px solid;
   border-right: 2px solid;
-  transform: rotateZ(315deg); /* Change rotation direction */
+  transform: rotateZ(315deg);
 }
 
 @media (min-width: 1200px) {
   .arrowbtn-left {
-    top: 35%; /* Vertical center */
-    left: -18vh; /* Adjust the left position */
-    margin-top: -var(--btn-size / 2); /* Offset the vertical position */
+    top: 35%;
+    left: -18vh;
+    margin-top: -var(--btn-size / 2);
   }
 
   .arrowbtn-right {
-    top: 35%; /* Vertical center */
-    right: -18vh; /* Adjust the right position */
-    margin-top: -var(--btn-size / 2); /* Offset the vertical position */
+    top: 35%;
+    right: -18vh;
+    margin-top: -var(--btn-size / 2);
   }
 }
 
