@@ -208,16 +208,12 @@ export const procesateLeaderBoard1 = function () {
     game: currentGame,
   };
 
-  // Initialize leaderboard1 if not already initialized
   let leaderboard1 = JSON.parse(localStorage.getItem("user_data")) || [];
 
-  // Push the playerData object into the leaderboard array
   leaderboard1.push(playerData);
 
-  // Store the updated leaderboard1 array
   localStorage.setItem("user_data", JSON.stringify(leaderboard1));
 
-  // Retrieve and log the stored data
   let storedUserData = localStorage.getItem("user_data");
 
   document.getElementById("leaderboardForm").reset();
@@ -286,8 +282,6 @@ function displayCSSProperties(element) {
     var propertyValue = computedStyles.getPropertyValue(propertyName);
     cssProperties[propertyName] = propertyValue;
   }
-
-  console.log(cssProperties);
 }
 
 export const displayCheckBoxesGame2 = function () {
@@ -379,8 +373,6 @@ const displayError = function () {
 };
 
 export const specialButtonsProcesate = function (letter) {
-  console.log(`Clicked special button with letter: ${letter}`);
-
   const inputField = document.getElementById("userAnswer");
   const cursorPos = inputField.selectionStart;
   const textBefore = inputField.value.substring(0, cursorPos);
@@ -514,10 +506,9 @@ const game4 = function () {
   const randomWordIndex1 = getRandomNumber(wordsArray2.length);
   const randomWord1 = wordsArray2[randomWordIndex1];
 
-  // Display the French word in displayWord element
   displayWord.innerHTML = randomWord1.english;
   frenchOutsideScope = randomWord1.french;
-  // Get two unique random indices for the other two buttons
+
   const indices = getRandomUniqueIndices(
     wordsArray2.length,
     randomWordIndex1,
@@ -627,7 +618,7 @@ const startTimer = function (totalSeconds, start) {
   if (!start) {
     clearInterval(timerInterval);
     timerElement.textContent = "";
-    return; // Exit the function
+    return;
   }
 
   let timerValue = totalSeconds;

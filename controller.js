@@ -36,20 +36,3 @@ const init = function () {
   startView.earlySubmitButton(model.earlySubmit);
 };
 init();
-
-function startGame() {
-  const form = document.getElementById("tenseSelectionForm");
-  const selectedTenses = Array.from(
-    form.querySelectorAll('input[type="checkbox"]:checked')
-  ).map((checkbox) => checkbox.name);
-}
-
-function insertLetter(letter) {
-  const inputField = document.getElementById("userAnswer");
-  const cursorPos = inputField.selectionStart;
-  const textBefore = inputField.value.substring(0, cursorPos);
-  const textAfter = inputField.value.substring(cursorPos);
-  inputField.value = textBefore + letter + textAfter;
-  inputField.focus();
-  inputField.setSelectionRange(cursorPos + 1, cursorPos + 1);
-}

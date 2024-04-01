@@ -612,7 +612,7 @@ body {
 .earlySubmit {
   position: absolute;
   width: 12vw;
-  height: 4vh;
+  height: 2vh;
   top: 3vh;
   left: 2vw;
   appearance: button;
@@ -1518,7 +1518,7 @@ li {
 .selectTensesTitle {
   position: absolute;
   top: 8vh;
-  left: 50%;
+  left: 57%;
   width: 60%;
   transform: translateX(-50%);
   font-weight: bold;
@@ -1840,19 +1840,19 @@ li {
   font-size: 16.5vh;
 }
 .inputVerbForm {
-  position: fixed;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 32vh;
 }
 
 .inputPerson {
-  position: fixed;
+  position: absolute;
   left: -30%;
   font-size: 5.5vh;
   width: 30vh;
-  height: 50vh;
   top: -1vh;
+  height: 10vh;
 }
 
 .verbButton {
@@ -2004,7 +2004,7 @@ buttonSubmit .verbButton:hover,
     font-size: 5vh;
   }
   .inputVerbForm {
-    position: fixed;
+    position: absolute;
     left: 63%;
     width: 70%;
     transform: translateX(-50%);
@@ -2013,11 +2013,12 @@ buttonSubmit .verbButton:hover,
   }
 
   .inputPerson {
-    position: fixed;
+    position: absolute;
     left: -35%;
     font-size: 5vh;
     width: 30vh;
-    height: 50vh;
+    height: 10vh;
+
     bottom: -43.5vh;
   }
 
@@ -2145,7 +2146,7 @@ buttonSubmit .verbButton:hover,
     font-size: 5vh;
   }
   .inputVerbForm {
-    position: fixed;
+    position: absolute;
     left: 63%;
     width: 70%;
     transform: translateX(-50%);
@@ -2154,11 +2155,12 @@ buttonSubmit .verbButton:hover,
   }
 
   .inputPerson {
-    position: fixed;
+    position: absolute;
     left: -35%;
     font-size: 5vh;
     width: 30vh;
-    height: 50vh;
+    height: 10vh;
+
     bottom: -43.5vh;
   }
 
@@ -2285,7 +2287,7 @@ buttonSubmit .verbButton:hover,
     font-size: 8vh;
   }
   .inputVerbForm {
-    position: fixed;
+    position: absolute;
     left: 60%;
     width: 65%;
     transform: translateX(-50%);
@@ -2294,11 +2296,12 @@ buttonSubmit .verbButton:hover,
   }
 
   .inputPerson {
-    position: fixed;
+    position: absolute;
     left: -22%;
     font-size: 5vh;
     width: 30vh;
-    height: 50vh;
+    height: 10vh;
+
     bottom: -43.5vh;
   }
 
@@ -2407,18 +2410,19 @@ buttonSubmit .verbButton:hover,
   }
 
   .inputVerbForm {
-    position: fixed;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 32vh;
   }
 
   .inputPerson {
-    position: fixed;
+    position: absolute;
     left: -42%;
     font-size: 5.5vh;
     width: 30vh;
-    height: 50vh;
+    height: 10vh;
+
     top: -1vh;
   }
 }
@@ -2430,7 +2434,7 @@ buttonSubmit .verbButton:hover,
     flex-wrap: wrap;
     justify-content: center;
     gap: 4.5vh;
-    border: 1px solid black;
+
     height: 28vh;
     width: 50vh;
     left: 50%;
